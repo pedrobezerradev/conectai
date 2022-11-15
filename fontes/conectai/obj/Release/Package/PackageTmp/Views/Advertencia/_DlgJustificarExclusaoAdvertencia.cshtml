@@ -1,0 +1,59 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model Advertencia
+@{
+	Advertencia advertencia = Model;
+}
+<div class="modal-dialog" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title"></h4>
+		</div>
+		<div class="modal-body">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-md-12">
+								<label class="control-label">Tipo:</label> @advertencia.DescricaoTipo - <label class="control-label">Data de Cadastro:</label> @Shared.fnGetStrData( @advertencia.DataAdvertencia )
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">								
+								<label class="control-label">Matrícula:</label> @advertencia.NrMatricula - @advertencia.NomeUsuarioMatricula
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<label class="control-label">Cargo:</label> @advertencia.Cargo
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<label class="control-label">Departamento/Setor:</label> @advertencia.Departamento / @advertencia.Setor
+							</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<form id="form-justificar-exclusao-advertencia" method="post" action="@Url.Action( "SalvarJustificativa", "Advertencia" )">
+							<input type="hidden" id="input-id-advertencia" name="IdAdvertencia" value="@advertencia.Id"/>
+							<div class="form-row">
+								<div class="form-group col-md-12">
+									<label>Justificativa para a exclusão<span class="text-danger">*</span></label>
+									<textarea class="form-control" style="resize: none;" rows="3" name="Justificativa" maxlength="@Advertencia.TAM_MAX_JUSTIFICATIVA"></textarea>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col-md-3">
+									<span class="text-danger form-control-static" style="font-size: .8em; text-align: right;">* obrigatório</span>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+		</div>
+		<br />
+		<div class="modal-footer">
+			<button id="btn-salvar" type="button" class="btn btn-primary btn-sm"><i class="fa fa-check fa-fw"></i>&nbsp;Salvar</button>
+			<button id="btn-cancel" type="button" class="btn btn-default btn-sm"><i class="fa fa-times fa-fw"></i>&nbsp;Fechar</button>
+		</div>
+	</div>
+</div>

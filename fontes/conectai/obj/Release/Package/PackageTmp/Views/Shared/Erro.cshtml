@@ -1,0 +1,15 @@
+﻿@{
+	ViewBag.Title = "Erro";
+	ViewBag.historico = null;
+
+	string msg = Model;
+}
+<br />
+<br />
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="alert alert-danger div-msg-erro" role="alert">
+			@Html.Raw( msg )
+		</div>
+	</div>
+</div>

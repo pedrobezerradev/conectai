@@ -1,0 +1,119 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model IList<Motivo>
+@{
+	ViewBag.Title = "Cadastro de Motivos";
+	ViewBag.historico = null;
+
+	const int NUM_COLUNAS = 3;
+
+	int numLinhasExtras = 10;
+
+	if (Model != null)
+	{
+		if (Model.Count < numLinhasExtras)
+		{
+			numLinhasExtras = numLinhasExtras - Model.Count;
+		}
+		else
+		{
+			numLinhasExtras = 0;
+		}
+	}
+}
+@section scripts{
+	<script src="~/Scripts/motivo/cadastroMotivo.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial( "../Shared/_BarraNavegacaoTopo" )
+}
+<div class="row">
+	<div class="col-md-4 col-md-offset-8" style="text-align: right; padding-bottom: 5px;">
+		<a class="btn btn-default" href="@Url.Action( "EditarMotivo", "Motivo" )"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Novo&nbsp;</a>
+	</div>
+</div>
+@if ( Model.Count == 0 )
+{
+	<div class="row" style="margin-top: 10px;">
+		<div class="col-md-12">
+			<div class="alert alert-warning" role="alert">
+				<p class="text-center"><strong>Não existem motivos cadastrados</strong></p>
+			</div>
+		</div>
+	</div>
+}
+else
+{
+<table id="tabela-motivo" class="table table-responsive table-bordered table-striped table-grid table-hover">
+	<thead>
+		<tr>
+			<th>Código</th>
+			<th style="width: 100%;">Descrição</th>
+			<th title="Ações">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach ( var motivo in Model )
+		{
+			<tr class="a-link-consultar">
+				<td>@motivo.Codigo</td>
+				<td>@motivo.Descricao</td>
+				<td style="white-space:nowrap; text-align: right;">
+					<a class="a-link-editar" href="@Url.Action( "EditarMotivo", "Motivo", new { codigo = @motivo.Codigo } )" id="@motivo.Codigo"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;editar</a>&nbsp;
+					<a class="a-link-excluir-motivo" href="@Url.Action( "ExcluirMotivo", "Motivo", new { codigo = @motivo.Codigo } )" id="@motivo.Codigo" data-desc-motivo="@motivo.Descricao"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;excluir</a>
+				</td>
+			</tr>
+		}
+		@for (int index = 0; index < numLinhasExtras; index++)
+		{
+			<tr>
+				@for (int cols = 0; cols < NUM_COLUNAS; cols++)
+				{
+					<td>&nbsp;</td>
+				}
+			</tr>
+		}
+	</tbody>
+	<tfoot>
+		<tr>
+			<td id="div-navegacao-paginas" colspan="@NUM_COLUNAS" style="text-align: right; font-weight: bold;">
+				<nav>
+					<ul class="pagination">
+						<li>
+							<span>
+								Ir para a página:
+								<select id="select-navegar-para">
+									@for (int numPag = 1; numPag <= ViewBag.paginacao.UltimaPagina; numPag++)
+									{
+										if (numPag == @ViewBag.paginacao.PaginaAtual)
+										{
+											<option value="@numPag" selected="selected">@numPag</option>
+										}
+										else
+										{
+											<option value="@numPag">@numPag</option>
+										}
+									}
+								</select>
+								<span>de @ViewBag.paginacao.UltimaPagina</span>
+								<input type="hidden" id="input-paginacao-atual" value="@ViewBag.paginacao.PaginaAtual" />
+								<input type="hidden" id="input-ultima-paginacao" value="@ViewBag.paginacao.UltimaPagina" />
+								<input type="hidden" id="input-numitens-atual" value="@ViewBag.paginacao.NumItensPorPag" />
+								<input type="hidden" id="input-numtotal-itens" value="@ViewBag.paginacao.NumTotalItens" />
+							</span>
+						</li>
+						<li><a href="#" class="a-link-navegacao" title="Ir para primeira página" data-ind-pag="@ViewBag.paginacao.PrimeiraPagina"><i class="fa fa-caret-left" aria-hidden="true"></i><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="a-link-navegacao" title="Ir para página anterior" data-ind-pag="@ViewBag.paginacao.PagAnt"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="a-link-navegacao" title="Ir para próxima página" data-ind-pag="@ViewBag.paginacao.ProxPag"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="a-link-navegacao" title="Ir para última página" data-ind-pag="@ViewBag.paginacao.UltimaPagina"><i class="fa fa-caret-right" aria-hidden="true"></i><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+						<li><span>@ViewBag.paginacao.IndPrimItem-@ViewBag.paginacao.IndUltimoItem de @ViewBag.paginacao.NumTotalItens</span></li>
+					</ul>
+				</nav>
+				<form id="form-preencher-lista" action="@Url.Action( "CadastroMotivo", "Motivo" )">
+					<input type="hidden" name="nrPagina" />
+				</form>
+			</td>
+		</tr>
+	</tfoot>
+</table>
+}

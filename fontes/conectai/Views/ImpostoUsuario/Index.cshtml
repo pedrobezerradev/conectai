@@ -1,0 +1,86 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model IList<ImpostoUsuario>
+@{
+	ViewBag.Title = Mensagens.STR_IMPOSTOS_POR_USUARIO;
+
+	const int NUM_COLUNAS = 5;
+
+	int numLinhasExtras = 10;
+
+	if (Model != null)
+	{
+		if (Model.Count < numLinhasExtras)
+		{
+			numLinhasExtras = numLinhasExtras - Model.Count;
+		}
+		else
+		{
+			numLinhasExtras = 0;
+		}
+	}
+}
+@section scripts{
+	<script src="~/Scripts/impostoUsuario/index-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+<div class="row">
+	<div class="col-md-4 col-md-offset-8" style="text-align: right; padding-bottom: 5px;">
+		<a class="btn btn-default" href="@Url.Action( "Editar", "ImpostoUsuario" )"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Novo&nbsp;</a>
+	</div>
+</div>
+@if (Model.Count == 0)
+{
+	<div class="row" style="margin-top: 10px;">
+		<div class="col-md-12">
+			<div class="alert alert-warning" role="alert">
+				<p class="text-center"><strong>@Mensagens.STR_NAO_EXISTEM_IMPOSTOS_PARA_USUARIO_CADASTRADO</strong></p>
+			</div>
+		</div>
+	</div>
+}
+else
+{
+	<table id="tabela-imposto-usuario" class="table table-responsive table-bordered table-striped table-grid table-hover">
+		<thead>
+            <tr>
+                <th>@Mensagens.STR_TIPO_IMPOSTO</th>
+                <th>@Mensagens.STR_ANO</th>
+                <th>@Mensagens.STR_CPF</th>
+                <th>@Mensagens.STR_VALOR</th>
+                <th title="@Mensagens.STR_ACOES">&nbsp;</th>
+            </tr>
+		</thead>
+		<tbody>
+			@foreach (var impostoUsuario in Model)
+			{
+            <tr class="a-link-consultar">
+                <td>@impostoUsuario.TipoImposto.Sigla</td>
+                <td>@impostoUsuario.NrAno</td>
+                <td>@impostoUsuario.Cpf</td>
+                <td>@impostoUsuario.VlImposto</td>
+                <td style="white-space:nowrap; text-align: right;">
+                    <a class="a-link-editar" href="@Url.Action( "Editar", "ImpostoUsuario", new { idImpostoUsuario = @impostoUsuario.Id } )" id="@impostoUsuario.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;editar</a>&nbsp;
+                    <a class="a-link-excluir" href="@Url.Action( "Excluir", "ImpostoUsuario", new { idImpostoUsuario = @impostoUsuario.Id } )" id="@impostoUsuario.Id" data-ano-imposto-usuario="@impostoUsuario.NrAno" data-cpf-imposto-usuario="@impostoUsuario.Cpf" data-sigla-imposto-usuario="@impostoUsuario.TipoImposto.Sigla"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;excluir</a>
+                </td>
+            </tr>
+			}
+			@for (int index = 0; index < numLinhasExtras; index++)
+			{
+				<tr>
+					@for (int cols = 0; cols < NUM_COLUNAS; cols++)
+					{
+						<td>&nbsp;</td>
+					}
+				</tr>
+			}
+		</tbody>
+		@Html.Partial("_CommonPaginacao", NUM_COLUNAS)
+	</table>
+	<form id="form-preencher-lista" action="@Url.Action( "Index", "TiposInvestimento" )">
+		<input type="hidden" name="nrPagina" />
+	</form>
+}

@@ -1,0 +1,85 @@
+﻿@using SistemaDeAdvertencia.Models.Data
+@{
+	Usuario usuario = (Usuario)Session["usuario"];
+	string nomeUsuario;
+
+	if ( usuario != null )
+	{
+		nomeUsuario = usuario.Nome;
+		int pos = nomeUsuario.Length;
+		if ( nomeUsuario.IndexOf( " " ) != -1)
+		{
+			pos = nomeUsuario.IndexOf( " " );
+		}
+		nomeUsuario = nomeUsuario.Substring(0, pos);
+	}
+	else
+	{
+		nomeUsuario = string.Empty;
+	}
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<title>Sistema de Advertências</title>
+	<link type="text/css" href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+	<link type="text/css" href="~/Content/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+	<link type="text/css" href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+	<link type="text/css" href="~/Content/css/site-1.0.css" rel="stylesheet" />
+	@RenderSection( "styles", required: false )
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<img src="~/Content/img/LogoCinza.gif" alt="Logo DeMillus" height="25" style="margin: 15px 5px 0 0;" />
+			</div>
+			@if( !string.IsNullOrEmpty( nomeUsuario ) )
+			{
+				<p class="navbar-text navbar-right">Olá, @nomeUsuario&nbsp;|&nbsp;<a href="@Url.Action( "Ajuda", "Sistema")" target="_blank" id="a-link-ajuda">Ajuda</a>&nbsp;|&nbsp;<a href="~/Account/Logoff">Sair</a></p>
+			}
+			<h4 class="navbar-text">Sistema de Advertências</h4>
+		</div>
+	</div>
+	<div class="container body-content">
+		@RenderSection( "navegacaoTopo", required: false )
+		@RenderBody()
+		<div class='modal' tabindex='-1' role='dialog' id="div-ajax-loading" style="display: none;">
+			<div class='modal-dialog modal-sm' role='document'>
+				<div class='modal-content'>
+					<div class='modal-header'>
+						<h4 class='modal-title'>Aguarde...</h4>
+					</div>
+					<div class='modal-body'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		@Html.Partial( "../Shared/_Rodape" )
+	</div>
+    @Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/moment")
+    @Scripts.Render("~/bundles/bootstrap")
+	<script src="~/Scripts/global/gCommonString.js"></script>
+	<script src="~/Scripts/global/gCommonAjax.js"></script>
+	<script src="~/Scripts/global/gCommon.js"></script>
+	<script src="~/Scripts/global/gCommonRodape.js"></script>
+	<script src="~/Scripts/global/gCommonSobre.js"></script>
+	<script type="text/javascript">
+		$( function ()
+		{
+			// Variável Global
+			$.Portal_RAIZ = '@Url.Content("~")';
+
+			loadStrings( $ );
+
+			CommonAjax.ajaxInit( $ );
+		} );
+	</script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@model HttpSessionStateBase
+@{
+	HttpSessionStateBase umaSessao = Model;
+	int count = (int)@ViewData ["count"];
+}
+@functions{
+	//-------------------------------------------------------------------------
+	string calcularTempoUltimaAtividade( HttpSessionStateBase sessao )
+	{
+		DateTime dtUltimaAtividade = (DateTime)sessao ["dtUltimaAtividade"];
+		TimeSpan ultimaAtividade = DateTime.Now.Subtract( dtUltimaAtividade );
+
+		return ( ultimaAtividade.ToString( "hh\\:mm\\:ss" ) );
+	}
+}
+<div class="row">
+	<small class="col-xs-2">
+		@(umaSessao ["userHostAddress"])
+	</small>
+	<small class="col-xs-2">
+		@(( (DateTime)( umaSessao ["dtLogin"] ) ).ToString( "dd/MM/yyyy HH:mm:ss" ))
+	</small>
+	<small class="col-xs-1">
+		(@calcularTempoUltimaAtividade( umaSessao ))
+	</small>
+</div>

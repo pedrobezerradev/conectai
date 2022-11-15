@@ -1,0 +1,37 @@
+﻿@using Conectai.Properties
+@{
+    ViewBag.Title = Mensagens.STR_ORGAO_MUNICIPAL;
+}
+@section navegacaoTopo
+{
+    @Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+@section scripts {
+}
+<div class="row" style="margin-top: 20px;">
+    <div class="col-md-12">
+        <ul>
+            <li role="presentation">
+                <a href="~/Demanda/IndicadoresAndamento">@Mensagens.STR_INDICADORES_ANDAMENTO_DEMANDAS</a>
+            </li>
+            <li role="presentation">
+                <a href="~/Demanda/IndiceSatisfacao">@Mensagens.STR_INDICE_SATISFACAO_CIDADAO</a>
+            </li>
+            <li role="presentation">
+                <a href="~/EspacoPublico/Index">@Mensagens.STR_GERENCIAR_GUIA_ESPACO_PUBLICO</a>
+            </li>
+            <li role="presentation">
+                <a href="~/TiposImposto/Index">@Mensagens.STR_GERENCIAR_TIPOS_IMPOSTOS</a>
+            </li>
+            <li role="presentation">
+                <a href="~/ImpostoUsuario/Index">@Mensagens.STR_GERENCIAR_IMPOSTOS_POR_USUARIO</a>
+            </li>
+            <li role="presentation">
+                <a href="~/Relatorio/ImpostoRenda">@Mensagens.STR_CONSULTAR_GESTAO_ATENDIMENTO</a>
+            </li>
+            <li role="presentation">
+                <a href="~/Relatorio/ImpostoRenda">@Mensagens.STR_CHAT_CENTRAL_ATENDIMENTO</a>
+            </li>
+        </ul>
+    </div>
+</div>

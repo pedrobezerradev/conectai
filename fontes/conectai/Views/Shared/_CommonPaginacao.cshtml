@@ -1,0 +1,43 @@
+﻿@model int?
+@{
+    int NUM_COLUNAS = (int) Model;
+}
+<tfoot>
+    <tr>
+        <td id="div-navegacao-paginas" colspan="@NUM_COLUNAS" style="text-align: right; font-weight: bold;">
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <span>
+                            Ir para a página:
+                            <select id="select-navegar-para">
+                                @for (int numPag = 1; numPag <= ViewBag.paginacao.UltimaPagina; numPag++)
+                                {
+                                    if (numPag == @ViewBag.paginacao.PaginaAtual)
+                                    {
+                                        <option value="@numPag" selected="selected">@numPag</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@numPag">@numPag</option>
+                                    }
+                                }
+                            </select>
+                            <span>de @ViewBag.paginacao.UltimaPagina</span>
+                            <input type="hidden" id="input-paginacao-atual" value="@ViewBag.paginacao.PaginaAtual" />
+                            <input type="hidden" id="input-ultima-paginacao" value="@ViewBag.paginacao.UltimaPagina" />
+                            <input type="hidden" id="input-numitens-atual" value="@ViewBag.paginacao.NumItensPorPag" />
+                            <input type="hidden" id="input-numtotal-itens" value="@ViewBag.paginacao.NumTotalItens" />
+                        </span>
+                    </li>
+                    <li><a href="#" class="a-link-navegacao" title="Ir para primeira página" data-ind-pag="@ViewBag.paginacao.PrimeiraPagina"><i class="fa fa-caret-left" aria-hidden="true"></i><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="a-link-navegacao" title="Ir para página anterior" data-ind-pag="@ViewBag.paginacao.PagAnt"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="a-link-navegacao" title="Ir para próxima página" data-ind-pag="@ViewBag.paginacao.ProxPag"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="a-link-navegacao" title="Ir para última página" data-ind-pag="@ViewBag.paginacao.UltimaPagina"><i class="fa fa-caret-right" aria-hidden="true"></i><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                    <li><span>@ViewBag.paginacao.IndPrimItem-@ViewBag.paginacao.IndUltimoItem de @ViewBag.paginacao.NumTotalItens</span></li>
+                </ul>
+            </nav>
+
+        </td>
+    </tr>
+</tfoot>

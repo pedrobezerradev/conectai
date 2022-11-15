@@ -1,0 +1,68 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model EspacoPublico
+@{
+	string txtAcao;
+
+	EspacoPublico espacoPublico = Model;
+	bool bInclusao = (espacoPublico.Id == EspacoPublico.ID_ESPACO_PUBLICO_INVALIDO);
+
+	if (bInclusao)
+	{
+		txtAcao = Mensagens.STR_INCLUIR_ESPACO_PUBLICO;
+	}
+	else
+	{
+		txtAcao = Mensagens.STR_ALTERAR_ESPACO_PUBLICO; 
+	}
+	ViewBag.Title = txtAcao;
+
+}
+@section scripts{
+	<script src="~/Scripts/espacoPublico/editar-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+<div class="panel panel-default" style="">
+	<div class="panel-heading">@txtAcao</div>
+	<div class="panel-body">
+
+        <form id="form-editar-espaco-publico" class="form-horizontal" method="post" action="@Url.Action( "Salvar", "EspacoPublico" )">
+            <input type="hidden" name="Id" id="input-espaco-publico-id" value="@espacoPublico.Id">
+            <hr />
+            <div class="form-group">
+                <label for="input-titulo" class="col-md-3 control-label">@Mensagens.STR_TITULO<span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" id="input-titulo" name="Titulo" placeholder="@Mensagens.STR_TITULO" value="@espacoPublico.Titulo" maxlength="@EspacoPublico.TAM_MAX_TITULO" autofocus="autofocus">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="input-detalhamento" class="col-md-3 control-label">@Mensagens.STR_DETALHAMENTO<span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" id="input-detalhamento" name="Detalhamento" placeholder="@Mensagens.STR_DETALHAMENTO" value="@espacoPublico.Detalhamento" maxlength="@EspacoPublico.TAM_MAX_DETALHAMENTO" autofocus="autofocus">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="input-data-limite" class="col-md-3 control-label">@Mensagens.STR_DATA_LIMITE</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" id="input-data-limite" name="DtLimite" placeholder="dd/mm/aaaa" value="@Shared.fnGetStrData( espacoPublico.DtLimiteDisponibilizacao )" maxlength="10" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-3">
+                    <span class="text-danger form-control-static" style="font-size: .8em; text-align: right;">@Mensagens.STR_OBRIGATORIO</span>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-3">
+                    <button class="btn btn-default" id="button-salvar"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;OK</button>
+                    <a href="@Url.Action( "Index", "EspacoPublico" )" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Cancelar</a>
+                </div>
+            </div>
+        </form>
+	</div>
+</div>

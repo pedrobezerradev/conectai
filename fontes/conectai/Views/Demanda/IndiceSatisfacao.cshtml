@@ -1,0 +1,178 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model Demanda
+@{
+    ViewBag.Title = Mensagens.STR_INDICE_SATISFACAO_CIDADAO;
+
+    int demandasEncerradas = ViewBag.demandasEncerradas;
+    int demandasAvaliadas  = ViewBag.demandasAvaliadas;
+    int demandasComNota1   = ViewBag.demandasComNota1;
+    int demandasComNota2   = ViewBag.demandasComNota2;
+    int demandasComNota3   = ViewBag.demandasComNota3;
+    int demandasComNota4   = ViewBag.demandasComNota4;
+    int demandasComNota5   = ViewBag.demandasComNota5;
+    int demandasComNota6   = ViewBag.demandasComNota6;
+    int demandasComNota7   = ViewBag.demandasComNota7;
+    int demandasComNota8   = ViewBag.demandasComNota8;
+    int demandasComNota9   = ViewBag.demandasComNota9;
+    int demandasComNota10  = ViewBag.demandasComNota10;
+}
+@section scripts{
+}
+@section navegacaoTopo
+{
+    @Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-warning">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasEncerradas</h2>
+                <p class="card-text text-center">DEMANDAS ENCERRADAS</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-warning">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasAvaliadas</h2>
+                <p class="card-text text-center">DEMANDAS AVALIADAS</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-danger">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota1</h2>
+                <p class="card-text text-center">NOTAS 1</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-danger">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota2</h2>
+                <p class="card-text text-center">NOTAS 2</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-danger">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota3</h2>
+                <p class="card-text text-center">NOTAS 3</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-danger">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota4</h2>
+                <p class="card-text text-center">NOTAS 4</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-danger">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota5</h2>
+                <p class="card-text text-center">NOTAS 5</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-success">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota6</h2>
+                <p class="card-text text-center">NOTAS 6</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-success">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota7</h2>
+                <p class="card-text text-center">NOTAS 7</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-success">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota8</h2>
+                <p class="card-text text-center">NOTAS 8</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-success">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota9</h2>
+                <p class="card-text text-center">NOTAS 9</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-success">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasComNota10</h2>
+                <p class="card-text text-center">NOTAS 10</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+</div>

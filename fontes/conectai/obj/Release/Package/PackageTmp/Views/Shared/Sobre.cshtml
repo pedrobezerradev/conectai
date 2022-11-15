@@ -1,0 +1,134 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+<div class='modal-dialog' role='document'>
+	<div class='modal-content'>
+		<div class='modal-header'>
+			<h4 class='modal-title'>Sobre</h4>
+		</div>
+		<div class="modal-body">
+			<div class="row">
+				<div class="col-md-12">
+					<p style="font-size: .8em;"><b>Novidades:</b></p>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<!--para cada nova versão, copiar tudo o que estiver dentro dessa div e mudar o número da versão. É necessário também mudar os IDs definidos para o numero da nova versão-->
+							<div class="panel-heading" role="tab" id="div-versao-1080">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-versao-1080" aria-expanded="true" aria-controls="a-versao-1080" style="font-size: .8em;">
+										<b>Versão: 1.0.8.0 - 08/04/2020</b>
+									</a>
+								</h4>
+							</div>
+							<div id="a-versao-1080" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="div-versao-1080">
+								<div class="panel-body">
+									<p style="font-size: .8em;">- Modificação no cadastro de advertências para incluir as informações de ano/campanha e se possui bloqueio.</p>
+									<p style="font-size: .8em;">- Ajuste no relatório para incluir a quantidade de advertências válidas.</p>
+									<p style="font-size: .8em;">- Ajuste no controle de versão do banco de dados.</p>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="div-versao-1070">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-versao-1070" aria-expanded="true" aria-controls="a-versao-1070" style="font-size: .8em;">
+										<b>Versão: 1.0.7.1 - 26/09/2019</b>
+									</a>
+								</h4>
+							</div>
+							<div id="a-versao-1070" class="panel-collapse collapse" role="tabpanel" aria-labelledby="div-versao-1070">
+								<div class="panel-body">
+									<p style="font-size: .8em;">- Opção de exclusão das advertências/suspensões já confirmadas informando justificativa.</p>
+									<p style="font-size: .8em;">- Ajuste no controle de versão do banco de dados.</p>
+								</div>
+							</div>
+						</div>
+					</div>					
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="div-versao-1060">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-versao-1060" aria-expanded="true" aria-controls="a-versao-1060" style="font-size: .8em;">
+										<b>Versão: 1.0.6.0 - 15/02/2018</b>
+									</a>
+								</h4>
+							</div>
+							<div id="a-versao-1060" class="panel-collapse collapse" role="tabpanel" aria-labelledby="div-versao-1060">
+								<div class="panel-body">
+									<p style="font-size: .8em;">- Inclusão do conceito de setores irmãos nas advertências/suspensões.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="div-versao-1005">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-versao-1005" aria-expanded="true" aria-controls="a-versao-1005" style="font-size: .8em;">
+										<b>Versão: 1.0.5.2 - 22/01/2018</b>
+									</a>
+								</h4>
+							</div>
+							<div id="a-versao-1005" class="panel-collapse collapse" role="tabpanel" aria-labelledby="div-versao-1005">
+								<div class="panel-body">
+									<p style="font-size: .8em;">- Ajuste na validação da exclusão da advertência que não verificará mais se foi a última advertência da promotora.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="div-versao-1004">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-versao-1004" aria-expanded="true" aria-controls="a-versao-1004" style="font-size: .8em;">
+										<b>Versão: 1.0.4.1 - 10/01/2018</b>
+									</a>
+								</h4>
+							</div>
+							<div id="a-versao-1004" class="panel-collapse collapse" role="tabpanel" aria-labelledby="div-versao-1004">
+								<div class="panel-body">
+									<p style="font-size: .8em;">- Ajuste no layout do relatório para diferenciar advertência de suspensão e o sequencial correto de cada caso.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="div-versao-1003">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-versao-1003" aria-expanded="true" aria-controls="a-versao-1003" style="font-size: .8em;">
+										<b>Versão: 1.0.3.0 - 29/12/2017</b>
+									</a>
+								</h4>
+							</div>
+							<div id="a-versao-1003" class="panel-collapse collapse" role="tabpanel" aria-labelledby="div-versao-1003">
+								<div class="panel-body">
+									<p style="font-size: .8em;">- Acerto na validação de senha para acesso ao sistema.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="div-versao-1002">
+								<h4 class="panel-title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#a-versao-1002" aria-expanded="true" aria-controls="a-versao-1002" style="font-size: .8em;">
+										<b>Versão: 1.0.2.0 - 14/12/2017</b>
+									</a>
+								</h4>
+							</div>
+							<div id="a-versao-1002" class="panel-collapse collapse" role="tabpanel" aria-labelledby="div-versao-1002">
+								<div class="panel-body">
+									<p style="font-size: .8em;">- Implantação do sistema.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button id='btn-ok' class='btn btn-default'><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Fechar</button>
+		</div>
+	</div>
+</div>

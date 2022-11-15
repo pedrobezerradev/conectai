@@ -1,0 +1,44 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model int
+@{
+	bool ehInclusao = ViewBag.ehInclusao;
+	int idAdvertencia = (int)Model;
+}
+
+<div class='modal-dialog' role='document'>
+	<div class='modal-content'>
+		<div class='modal-header'>
+			<h4 class='modal-title'>Impressão da advertência</h4>
+		</div>
+		<div class="modal-body">
+			<div class="row">
+				@if ( ehInclusao )
+				{
+					<form id="form-encerrar-edicao" action="@Url.Action( "EditarAdvertencia", "Advertencia" )" method="get"></form>
+					<div class="col-md-10 col-md-offset-1 alert alert-success">
+						<p>
+							A advertência foi incluída com sucesso.
+						</p>
+						<p>
+							Para imprimir a advertência <a class="a-link-imprimir-advertencia" href="@Url.Action( "ImprimirAdvertencia", "Advertencia", new { id = idAdvertencia } )" id="idAdvertencia" target="_blank"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;clique aqui</a>
+						</p>
+					</div>
+				}
+				else
+				{
+					<form id="form-encerrar-edicao" action="@Url.Action( "CadastroAdvertencia", "Advertencia" )" method="get"></form>
+					<div class="col-md-10 col-md-offset-1 alert alert-success">
+						<p>
+							A advertência foi alterada com sucesso.<br />
+						</p>
+					</div>
+				}
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button id='btn-ok'class='btn btn-default'><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Fechar</button>
+		</div>
+	</div>
+</div>
+
+		

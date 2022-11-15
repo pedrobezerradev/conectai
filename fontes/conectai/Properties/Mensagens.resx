@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DESENVOLVIDO_POR" xml:space="preserve">
+    <value>Desenvolvido por Bruno Ponte</value>
+  </data>
+  <data name="ERRO_IMPRIMIR_CONTEUDO_INVALIDO" xml:space="preserve">
+    <value>Ocorreu um erro imprimindo a adevertência/suspensão.  A impressão retornou um arquivo com 0 bytes ou o content type vazio.</value>
+  </data>
+  <data name="ERRO_PREPARANDO_ARQ_DOWNLOAD" xml:space="preserve">
+    <value>O download não poderá ser realizado.&lt;br/&gt;
+Ocorreu um erro preparando o arquivo para download.</value>
+  </data>
+  <data name="ERR_ANO_INVALIDO" xml:space="preserve">
+    <value>O ano informado é inválido.</value>
+  </data>
+  <data name="ERR_ANO_MES_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o ano e o mês.</value>
+  </data>
+  <data name="ERR_ANO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o ano.</value>
+  </data>
+  <data name="ERR_ARQUIVO_NAO_EXISTE" xml:space="preserve">
+    <value>Arquivo não existe.</value>
+  </data>
+  <data name="ERR_ATENDIMENTO_AVALIADO" xml:space="preserve">
+    <value>Não foi possível avaliar o atendimento.</value>
+  </data>
+  <data name="ERR_ATIVO_EXCLUIR" xml:space="preserve">
+    <value>Não foi possível excluir o ativo.</value>
+  </data>
+  <data name="ERR_ATIVO_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Ativo não encontrado.</value>
+  </data>
+  <data name="ERR_ATIVO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o ativo.</value>
+  </data>
+  <data name="ERR_CAMPO_NOME_ARQ_DOWNLOAD_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário selecionar o arquivo para download.</value>
+  </data>
+  <data name="ERR_CAMPO_VALOR_DECIMAL_DEVE_SER_DIFERENTE_ZERO" xml:space="preserve">
+    <value>O valor informado no campo '{0}'  deve ser diferente de zero.</value>
+  </data>
+  <data name="ERR_CAMPO_VALOR_DECIMAL_DEVE_SER_MAIOR_IGUAL_ZERO" xml:space="preserve">
+    <value>O valor informado no campo '{0}'  deve ser maior ou igual a zero.</value>
+  </data>
+  <data name="ERR_CAMPO_VALOR_DECIMAL_DEVE_SER_MAIOR_QUE_ZERO" xml:space="preserve">
+    <value>O valor informado no campo '{0}'  deve ser maior que zero.</value>
+  </data>
+  <data name="ERR_CAMPO_VALOR_DECIMAL_INVALIDO" xml:space="preserve">
+    <value>O valor informado no campo '{0}' é inválido. Favor informar um número com até {1} casas decimais e separador decimal utilizando vírgula.</value>
+  </data>
+  <data name="ERR_CAMPO_VALOR_DECIMAL_OBRIGATORIO" xml:space="preserve">
+    <value>O campo '{0}' é obrigatório.</value>
+  </data>
+  <data name="ERR_CODIGO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o código.</value>
+  </data>
+  <data name="ERR_CODIGO_TAMANHO_INVALIDO" xml:space="preserve">
+    <value>O código informado é inválido.</value>
+  </data>
+  <data name="ERR_CONN_STRING_VAZIA" xml:space="preserve">
+    <value>String de conexão '{0}' com o Banco de Dados não localizada.</value>
+  </data>
+  <data name="ERR_CPF_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o CPF.</value>
+  </data>
+  <data name="ERR_DATA_AQUISICAO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar a data de aquisição.</value>
+  </data>
+  <data name="ERR_DEMANDA_ASSUMIR" xml:space="preserve">
+    <value>Não foi possível assumir a demanda.</value>
+  </data>
+  <data name="ERR_DEMANDA_EXCLUIR" xml:space="preserve">
+    <value>Não foi possível excluir a demanda.</value>
+  </data>
+  <data name="ERR_DEMANDA_FINALIZAR" xml:space="preserve">
+    <value>Não foi possível finalizar a demanda.</value>
+  </data>
+  <data name="ERR_DEMANDA_NAO_ENCONTRADA" xml:space="preserve">
+    <value>Demanda não encontrada.</value>
+  </data>
+  <data name="ERR_DESCRICAO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar a descrição.</value>
+  </data>
+  <data name="ERR_DESCRICAO_TAMANHO_INVALIDO" xml:space="preserve">
+    <value>A descrição informada é inválida.</value>
+  </data>
+  <data name="ERR_EMAIL_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o e-mail.</value>
+  </data>
+  <data name="ERR_EMAIL_TAMANHO_INVALIDO" xml:space="preserve">
+    <value>O e-mail informado é inválido.</value>
+  </data>
+  <data name="ERR_ESPACO_PUBLICO_EXCLUIR" xml:space="preserve">
+    <value>Não foi possível excluir o espaço público.</value>
+  </data>
+  <data name="ERR_ESPACO_PUBLICO_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Espaço Público não encontrado.</value>
+  </data>
+  <data name="ERR_IMPOSTO_USUARIO_EXCLUIR" xml:space="preserve">
+    <value>Não foi possível excluir o imposto do usuário.</value>
+  </data>
+  <data name="ERR_IMPOSTO_USUARIO_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Imposto do usuário não encontrado.</value>
+  </data>
+  <data name="ERR_LOGIN_CAMPO_SENHA_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar a senha do usuário.</value>
+  </data>
+  <data name="ERR_LOGIN_CAMPO_USUARIO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o usuário.</value>
+  </data>
+  <data name="ERR_LOGIN_CAMPO_USUARIO_TAMANHO_INVALIDO" xml:space="preserve">
+    <value>O login do usuário deve ter no máximo 8 caracteres.</value>
+  </data>
+  <data name="ERR_MES_INVALIDO" xml:space="preserve">
+    <value>O mês selecionado é inválido.</value>
+  </data>
+  <data name="ERR_MES_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o mês.</value>
+  </data>
+  <data name="ERR_NOME_ARQ_DOWNLOAD_INVALIDO" xml:space="preserve">
+    <value>Arquivo selecionado para download não encontrado.</value>
+  </data>
+  <data name="ERR_NOME_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o nome.</value>
+  </data>
+  <data name="ERR_NOME_TAMANHO_INVALIDO" xml:space="preserve">
+    <value>O nome informado é inválido.</value>
+  </data>
+  <data name="ERR_OBSERVACAO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar a observação</value>
+  </data>
+  <data name="ERR_OBSERVACAO_TAMANHO_INVALIDO" xml:space="preserve">
+    <value>A observação informada é inválida.</value>
+  </data>
+  <data name="ERR_PERFIL_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário selecionar o perfil.</value>
+  </data>
+  <data name="ERR_PERFIL_RISCO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário selecionar o perfil de risco.</value>
+  </data>
+  <data name="ERR_PRECO_MEDIO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o preço médio.</value>
+  </data>
+  <data name="ERR_QTDE_COTAS_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar a quantidade de cotas.</value>
+  </data>
+  <data name="ERR_RELATORIO_QUANTIDADE_LINHAS_EXCEDE_MAX_PERMITIDO" xml:space="preserve">
+    <value>A quantidade de linhas excede o máximo permitido para o relatório.</value>
+  </data>
+  <data name="ERR_RELATORIO_SEM_DADOS" xml:space="preserve">
+    <value>Não foram encontrados dados para o filtro selecionado para o relatório.</value>
+  </data>
+  <data name="ERR_RENDIMENTO_EXCLUIR" xml:space="preserve">
+    <value>Não foi possível excluir o rendimento.</value>
+  </data>
+  <data name="ERR_RENDIMENTO_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Rendimento não encontrado.</value>
+  </data>
+  <data name="ERR_SALDO_ATUAL_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o saldo atual.</value>
+  </data>
+  <data name="ERR_SEM_CONN_STRING" xml:space="preserve">
+    <value>Nenhuma string de conexão com o Banco de Dados localizada.</value>
+  </data>
+  <data name="ERR_SENHA_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar a senha.</value>
+  </data>
+  <data name="ERR_SENHA_TAMANHO_INVALIDO" xml:space="preserve">
+    <value>A senha informada é inválida.</value>
+  </data>
+  <data name="ERR_SESSAO_EXPIRADA" xml:space="preserve">
+    <value>Você não tem acesso a este menu.&lt;br/&gt;
+Faça o login para obter acesso. </value>
+  </data>
+  <data name="ERR_SESSAO_EXPIRADA_AJAX" xml:space="preserve">
+    <value>Sua sessão expirou.&lt;br /&gt;
+Para voltar a utilizar o sistema, &lt;a href='{0}' class='a-link-clique-aqui'&gt;clique aqui&lt;/a&gt;.</value>
+  </data>
+  <data name="ERR_SIGLA_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar a sigla.</value>
+  </data>
+  <data name="ERR_SIGLA_TAMANHO_INVALIDO" xml:space="preserve">
+    <value>A sigla informada é inválida.</value>
+  </data>
+  <data name="ERR_SQL_NAO_TRATADO" xml:space="preserve">
+    <value>Ocorreu um erro inesperado ao validar as informações.</value>
+  </data>
+  <data name="ERR_TIPO_IMPOSTO_EXCLUIR" xml:space="preserve">
+    <value>Não foi possível excluir o imposto</value>
+  </data>
+  <data name="ERR_TIPO_IMPOSTO_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Tipo de imposto não encontrado.</value>
+  </data>
+  <data name="ERR_TIPO_INVESTIMENTO_EXCLUIR" xml:space="preserve">
+    <value>Não foi possível excluir o tipo de investimento.</value>
+  </data>
+  <data name="ERR_TIPO_INVESTIMENTO_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Tipo de investimento não encontrado.</value>
+  </data>
+  <data name="ERR_TIPO_INVESTIMENTO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário selecionar o tipo de investimento.</value>
+  </data>
+  <data name="ERR_TIPO_SERVICO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o tipo de serviço</value>
+  </data>
+  <data name="ERR_USUARIO_EXCLUIR" xml:space="preserve">
+    <value>Não foi possível excluir o usuário.</value>
+  </data>
+  <data name="ERR_USUARIO_INVALIDO_OU_NAO_ASSOCIADO" xml:space="preserve">
+    <value>Usuário inválido ou não associado ao sistema.</value>
+  </data>
+  <data name="ERR_USUARIO_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Usuário não encontrado.</value>
+  </data>
+  <data name="ERR_USUARIO_SENHA_INVALIDA" xml:space="preserve">
+    <value>Senha inválida.</value>
+  </data>
+  <data name="ERR_VALOR_IMPOSTO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o valor do imposto.</value>
+  </data>
+  <data name="ERR_VALOR_INVESTIDO_OBRIGATORIO" xml:space="preserve">
+    <value>É necessário informar o valor investido.</value>
+  </data>
+  <data name="EXCEPTION_MSG_ERRO" xml:space="preserve">
+    <value>&lt;p&gt;Ocorreu um erro inesperado.&lt;/p&gt;
+&lt;p&gt;O fato de você estar vendo essa mensagem significa que automaticamente fomos notificados deste problema.&lt;/p&gt;
+&lt;p&gt;Se o problema persistir, por favor aguarde mais um momento para tentar novamente.&lt;/p&gt;</value>
+  </data>
+  <data name="MSG_ATENDIMENTO_AVALIADO_SUCESSO" xml:space="preserve">
+    <value>Obrigado pela sua avaliação!</value>
+  </data>
+  <data name="MSG_RENDIMENTO_GERADO_SUCESSO" xml:space="preserve">
+    <value>Rendimentos gerados com sucesso.</value>
+  </data>
+  <data name="STR_ACAO" xml:space="preserve">
+    <value>Ação</value>
+  </data>
+  <data name="STR_ACOES" xml:space="preserve">
+    <value>Ações</value>
+  </data>
+  <data name="STR_AGRESSIVO" xml:space="preserve">
+    <value>Agressivo</value>
+  </data>
+  <data name="STR_ALOCACAO_ATUAL_RECURSOS" xml:space="preserve">
+    <value>Alocação Atual de Recursos</value>
+  </data>
+  <data name="STR_ALOCACAO_INDICADA" xml:space="preserve">
+    <value>Alocação Indicada</value>
+  </data>
+  <data name="STR_ALOCACOES_PERFIL" xml:space="preserve">
+    <value>Alocações por Perfil</value>
+  </data>
+  <data name="STR_ALTERAR_ESPACO_PUBLICO" xml:space="preserve">
+    <value>Alterar Espaço Público</value>
+  </data>
+  <data name="STR_ANO" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="STR_ATIVO" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="STR_ATIVOS" xml:space="preserve">
+    <value>Ativos</value>
+  </data>
+  <data name="STR_ATUAL" xml:space="preserve">
+    <value>Atual</value>
+  </data>
+  <data name="STR_ATUAL_RS" xml:space="preserve">
+    <value>Atual R$</value>
+  </data>
+  <data name="STR_AVALIAR_ATENDIMENTO" xml:space="preserve">
+    <value>Avaliar Atendimento</value>
+  </data>
+  <data name="STR_CADASTROS" xml:space="preserve">
+    <value>Cadastros</value>
+  </data>
+  <data name="STR_CADASTRO_ATIVOS" xml:space="preserve">
+    <value>Cadastro de Ativos</value>
+  </data>
+  <data name="STR_CHAMADOS" xml:space="preserve">
+    <value>Chamados</value>
+  </data>
+  <data name="STR_CHAMADOS_EM_ABERTO" xml:space="preserve">
+    <value>Chamados em Aberto</value>
+  </data>
+  <data name="STR_CHAT_CENTRAL_ATENDIMENTO" xml:space="preserve">
+    <value>Chat com a Central de Atendimento</value>
+  </data>
+  <data name="STR_CIDADAO" xml:space="preserve">
+    <value>Cidadão</value>
+  </data>
+  <data name="STR_CODIGO" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="STR_CODIGO_ATIVO" xml:space="preserve">
+    <value>Código do Ativo</value>
+  </data>
+  <data name="STR_COMPARATIVO_MENSAL" xml:space="preserve">
+    <value>Comparativo Mensal - Investimento Acumulado x Saldo</value>
+  </data>
+  <data name="STR_CONSERVADOR" xml:space="preserve">
+    <value>Conservador</value>
+  </data>
+  <data name="STR_CONSULTAR_EMITIR_SEGUNDA_VIA_IMPOSTOS" xml:space="preserve">
+    <value>Consultar e emitir segunda via de impostos</value>
+  </data>
+  <data name="STR_CONSULTAR_GESTAO_ATENDIMENTO" xml:space="preserve">
+    <value>Consultar Gestão dos Atendimentos</value>
+  </data>
+  <data name="STR_COTACAO" xml:space="preserve">
+    <value>Cotação</value>
+  </data>
+  <data name="STR_COTAS" xml:space="preserve">
+    <value>Cotas</value>
+  </data>
+  <data name="STR_CPF" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="STR_DATA_ABERTURA" xml:space="preserve">
+    <value>Data de Abertura</value>
+  </data>
+  <data name="STR_DATA_AQUISICAO" xml:space="preserve">
+    <value>Data de Aquisição</value>
+  </data>
+  <data name="STR_DATA_ENCERRAMENTO" xml:space="preserve">
+    <value>Data de Encerramento</value>
+  </data>
+  <data name="STR_DATA_LIMITE" xml:space="preserve">
+    <value>Data Limite</value>
+  </data>
+  <data name="STR_DEMANDA_CONSULTAR" xml:space="preserve">
+    <value>Consultar Demanda</value>
+  </data>
+  <data name="STR_DEMANDA_CRIAR" xml:space="preserve">
+    <value>Criar Demanda</value>
+  </data>
+  <data name="STR_DEMANDA_ENCERRAR" xml:space="preserve">
+    <value>Encerrar Demanda</value>
+  </data>
+  <data name="STR_DEMANDA_MAPA_MUNICIPIO" xml:space="preserve">
+    <value>Demandas no Mapa do Município</value>
+  </data>
+  <data name="STR_DESCRICAO" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="STR_DESCRICAO_ATIVO" xml:space="preserve">
+    <value>Descrição do Ativo</value>
+  </data>
+  <data name="STR_DESCRICAO_GRUPO" xml:space="preserve">
+    <value>Descrição do Grupo</value>
+  </data>
+  <data name="STR_DESCRICAO_TIPO" xml:space="preserve">
+    <value>Descrição do Tipo</value>
+  </data>
+  <data name="STR_DETALHAMENTO" xml:space="preserve">
+    <value>Detalhamento</value>
+  </data>
+  <data name="STR_EDITAR_ALOCACAO_PERFIL" xml:space="preserve">
+    <value>Editar Alocação de Perfil</value>
+  </data>
+  <data name="STR_EDITAR_ATIVO_INVESTIMENTO" xml:space="preserve">
+    <value>Editar Ativo de Investimento</value>
+  </data>
+  <data name="STR_EDITAR_DEMANDA" xml:space="preserve">
+    <value>Alterar Demanda</value>
+  </data>
+  <data name="STR_EDITAR_GRUPO_INVESTIMENTO" xml:space="preserve">
+    <value>Editar Grupo de Investimento</value>
+  </data>
+  <data name="STR_EDITAR_IMPOSTO_USUARIO" xml:space="preserve">
+    <value>Editar Imposto do Usuário</value>
+  </data>
+  <data name="STR_EDITAR_RENDIMENTO" xml:space="preserve">
+    <value>Editar Rendimento</value>
+  </data>
+  <data name="STR_EDITAR_TIPO_IMPOSTO" xml:space="preserve">
+    <value>Alterar Tipo de Imposto</value>
+  </data>
+  <data name="STR_EDITAR_TIPO_INVESTIMENTO" xml:space="preserve">
+    <value>Editar Tipo de Investimento</value>
+  </data>
+  <data name="STR_EMAIL" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="STR_EQUIPE_CAMPO" xml:space="preserve">
+    <value>Equipe de Campo</value>
+  </data>
+  <data name="STR_ESPACO_PUBLICO" xml:space="preserve">
+    <value>Espaço Público</value>
+  </data>
+  <data name="STR_GERA_PERIODO_INFORMATIVO" xml:space="preserve">
+    <value>Será gerado o próximo mês, copiando as informações do último período.&lt;br /&gt;Os valores também serão copiados para o próximo mês.</value>
+  </data>
+  <data name="STR_GERENCIAR_GUIA_ESPACO_PUBLICO" xml:space="preserve">
+    <value>Gerenciar Guia de Espaço Público</value>
+  </data>
+  <data name="STR_GERENCIAR_IMPOSTOS_POR_USUARIO" xml:space="preserve">
+    <value>Gerenciar Impostos por Usuário</value>
+  </data>
+  <data name="STR_GERENCIAR_TIPOS_IMPOSTOS" xml:space="preserve">
+    <value>Gerenciar Tipos de Impostos</value>
+  </data>
+  <data name="STR_GRUPO" xml:space="preserve">
+    <value>Grupo</value>
+  </data>
+  <data name="STR_GRUPOS_INVESTIMENTO" xml:space="preserve">
+    <value>Grupos de Investimento</value>
+  </data>
+  <data name="STR_GRUPO_INVESTIMENTO" xml:space="preserve">
+    <value>Grupo do Investimento</value>
+  </data>
+  <data name="STR_IBOVESPA" xml:space="preserve">
+    <value>IBOVESPA</value>
+  </data>
+  <data name="STR_IMPOSTO" xml:space="preserve">
+    <value>Imposto</value>
+  </data>
+  <data name="STR_IMPOSTOS_POR_USUARIO" xml:space="preserve">
+    <value>Impostos por Usuário</value>
+  </data>
+  <data name="STR_IMPOSTO_RENDA" xml:space="preserve">
+    <value>Imposto de Renda</value>
+  </data>
+  <data name="STR_INCLUIR_ALOCACAO_PERFIL" xml:space="preserve">
+    <value>Incluir Alocação de Perfil</value>
+  </data>
+  <data name="STR_INCLUIR_ATIVO_INVESTIMENTO" xml:space="preserve">
+    <value>Incluir Ativo de Investimento</value>
+  </data>
+  <data name="STR_INCLUIR_DEMANDA" xml:space="preserve">
+    <value>Incluir Demanda</value>
+  </data>
+  <data name="STR_INCLUIR_ESPACO_PUBLICO" xml:space="preserve">
+    <value>Incluir Espaço Público</value>
+  </data>
+  <data name="STR_INCLUIR_GRUPO_INVESTIMENTO" xml:space="preserve">
+    <value>Incluir Grupo de Investimento</value>
+  </data>
+  <data name="STR_INCLUIR_IMPOSTO_USUARIO" xml:space="preserve">
+    <value>Incluir Imposto do Usuário</value>
+  </data>
+  <data name="STR_INCLUIR_RENDIMENTO" xml:space="preserve">
+    <value>Incluir Rendimento</value>
+  </data>
+  <data name="STR_INCLUIR_TIPO_IMPOSTO" xml:space="preserve">
+    <value>Incluir Tipo de Imposto</value>
+  </data>
+  <data name="STR_INCLUIR_TIPO_INVESTIMENTO" xml:space="preserve">
+    <value>Incluir Tipo de Investimento</value>
+  </data>
+  <data name="STR_INDICADORES_ANDAMENTO_DEMANDAS" xml:space="preserve">
+    <value>Indicadores do Andamento de Demandas</value>
+  </data>
+  <data name="STR_INDICADORES_DEMANDA" xml:space="preserve">
+    <value>Indicadores de Demanda</value>
+  </data>
+  <data name="STR_INDICE_SATISFACAO_CIDADAO" xml:space="preserve">
+    <value>Índice de Satisfação do Cidadão</value>
+  </data>
+  <data name="STR_INFORME_RENDIMENTOS" xml:space="preserve">
+    <value>Informe de Rendimentos</value>
+  </data>
+  <data name="STR_INVESTIMENTO" xml:space="preserve">
+    <value>Investimento</value>
+  </data>
+  <data name="STR_LUCRO_ESTIMADO" xml:space="preserve">
+    <value>Lucro Estimado</value>
+  </data>
+  <data name="STR_LUCRO_PREJUIZO" xml:space="preserve">
+    <value>Lucro/Prejuízo</value>
+  </data>
+  <data name="STR_MES" xml:space="preserve">
+    <value>Mês</value>
+  </data>
+  <data name="STR_MINHAS_DEMANDAS" xml:space="preserve">
+    <value>Minhas Demandas</value>
+  </data>
+  <data name="STR_MODERADO" xml:space="preserve">
+    <value>Moderado</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_ALOCACOES_PERFIL_CADASTRADO" xml:space="preserve">
+    <value>Não existem alocações por perfil cadastrados.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_ATIVOS_INVESTIMENTO_CADASTRADO" xml:space="preserve">
+    <value>Não existem ativos de investimento cadastrados.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_DEMANDAS_CADASTRADAS" xml:space="preserve">
+    <value>Não existem demandas cadastradas.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_DEMANDAS_PARA_O_FILTRO" xml:space="preserve">
+    <value>Não existem demandas para o filtro informado.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_ESPACOS_PUBLICO_CADASTRADO" xml:space="preserve">
+    <value>Não existem espaços públicos cadastrados.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_GRUPOS_INVESTIMENTO_CADASTRADO" xml:space="preserve">
+    <value>Não existem grupos de investimento cadastrados.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_IMPOSTOS_PARA_USUARIO_CADASTRADO" xml:space="preserve">
+    <value>Não existem impostos associados a usuários.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_RENDIMENTOS_CADASTRADO" xml:space="preserve">
+    <value>Não existem rendimentos cadastrados.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_TIPOS_IMPOSTO_CADASTRADO" xml:space="preserve">
+    <value>Não existem tipos de impostos cadastrados.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_TIPOS_INVESTIMENTO_CADASTRADO" xml:space="preserve">
+    <value>Não existem tipos de investimento cadastrados.</value>
+  </data>
+  <data name="STR_NAO_EXISTEM_USUARIOS_CADASTRADO" xml:space="preserve">
+    <value>Não existem usuários cadastrados.</value>
+  </data>
+  <data name="STR_NOME" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="STR_NOME_ATIVO" xml:space="preserve">
+    <value>Nome do Ativo</value>
+  </data>
+  <data name="STR_NOTA_AVALIACAO" xml:space="preserve">
+    <value>Nota de Avaliação</value>
+  </data>
+  <data name="STR_NUMERO_DEMANDA" xml:space="preserve">
+    <value>Demanda</value>
+  </data>
+  <data name="STR_OBRIGATORIO" xml:space="preserve">
+    <value>* obrigatório</value>
+  </data>
+  <data name="STR_OBSERVACAO" xml:space="preserve">
+    <value>Observação</value>
+  </data>
+  <data name="STR_OBSERVACOES" xml:space="preserve">
+    <value>Observações</value>
+  </data>
+  <data name="STR_ORGAO_MUNICIPAL" xml:space="preserve">
+    <value>Órgão Municipal</value>
+  </data>
+  <data name="STR_PERCENTUAL_ALOCACAO" xml:space="preserve">
+    <value>% Alocação</value>
+  </data>
+  <data name="STR_PERCENTUAL_ALOCACAO_DESCRICAO" xml:space="preserve">
+    <value>Percentual de Alocação</value>
+  </data>
+  <data name="STR_PERCENTUAL_CRESCIMENTO" xml:space="preserve">
+    <value>% Crescimento</value>
+  </data>
+  <data name="STR_PERFIL" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="STR_PERFIL_RISCO" xml:space="preserve">
+    <value>Perfil do Risco</value>
+  </data>
+  <data name="STR_PRECO_MEDIO" xml:space="preserve">
+    <value>Preço Médio</value>
+  </data>
+  <data name="STR_QUANTIDADE" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+  <data name="STR_QUANTIDADE_COTAS" xml:space="preserve">
+    <value>Quantidade de Cotas</value>
+  </data>
+  <data name="STR_RELATORIOS" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="STR_RELATORIO_INFORME_RENDIMENTOS" xml:space="preserve">
+    <value>Relatório de Informe de Rendimentos</value>
+  </data>
+  <data name="STR_RENDIMENTOS" xml:space="preserve">
+    <value>Rendimentos</value>
+  </data>
+  <data name="STR_SALDO_ATUAL" xml:space="preserve">
+    <value>Saldo Atual</value>
+  </data>
+  <data name="STR_SELECIONE" xml:space="preserve">
+    <value>Selecione</value>
+  </data>
+  <data name="STR_SELECIONE_ATIVO" xml:space="preserve">
+    <value>Selecione um ativo</value>
+  </data>
+  <data name="STR_SELECIONE_GRUPO_INVESTIMENTO" xml:space="preserve">
+    <value>Selecione um grupo de investimento</value>
+  </data>
+  <data name="STR_SELECIONE_MES" xml:space="preserve">
+    <value>Selecione um mês</value>
+  </data>
+  <data name="STR_SELECIONE_NOTA" xml:space="preserve">
+    <value>Selecione a nota</value>
+  </data>
+  <data name="STR_SELECIONE_PERFIL_RISCO" xml:space="preserve">
+    <value>Selecione um perfil de risco</value>
+  </data>
+  <data name="STR_SELECIONE_TIPO_IMPOSTO" xml:space="preserve">
+    <value>Selecione um tipo de imposto</value>
+  </data>
+  <data name="STR_SELECIONE_TIPO_INVESTIMENTO" xml:space="preserve">
+    <value>Selecione um tipo de investimento</value>
+  </data>
+  <data name="STR_SELECIONE_TIPO_SERVICO" xml:space="preserve">
+    <value>Selecione o tipo de serviço</value>
+  </data>
+  <data name="STR_SENHA" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="STR_SIGLA" xml:space="preserve">
+    <value>Sigla</value>
+  </data>
+  <data name="STR_STATUS" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="STR_STATUS_DEMANDA" xml:space="preserve">
+    <value>Status da Demanda</value>
+  </data>
+  <data name="STR_TIPO" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="STR_TIPOS_IMPOSTO" xml:space="preserve">
+    <value>Tipos de Imposto</value>
+  </data>
+  <data name="STR_TIPOS_INVESTIMENTO" xml:space="preserve">
+    <value>Tipos de Investimento</value>
+  </data>
+  <data name="STR_TIPO_IMPOSTO" xml:space="preserve">
+    <value>Tipo de Imposto</value>
+  </data>
+  <data name="STR_TIPO_INVESTIMENTO" xml:space="preserve">
+    <value>Tipo de Investimento</value>
+  </data>
+  <data name="STR_TIPO_SERVICO" xml:space="preserve">
+    <value>Tipo de Serviço</value>
+  </data>
+  <data name="STR_TITULO" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="STR_TOTAL_INVESTIDO" xml:space="preserve">
+    <value>Total Investido</value>
+  </data>
+  <data name="STR_ULTIMO_PERIODO" xml:space="preserve">
+    <value>Último Período:</value>
+  </data>
+  <data name="STR_USUARIOS" xml:space="preserve">
+    <value>Usuários</value>
+  </data>
+  <data name="STR_VALOR" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="STR_VALOR_PRECO_MEDIO" xml:space="preserve">
+    <value>Valor Preço Médio</value>
+  </data>
+  <data name="STR_VALOR_TOTAL_INVESTIDO" xml:space="preserve">
+    <value>Valor Total Investido</value>
+  </data>
+</root>

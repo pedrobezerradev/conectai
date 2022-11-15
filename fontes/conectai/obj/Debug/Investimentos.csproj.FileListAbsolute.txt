@@ -1,0 +1,355 @@
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.csproj.GenerateResource.cache
+C:\Sistemas\Investimentos\Investimentos\bin\Manual\manual_1.0.pdf
+C:\Sistemas\Investimentos\Investimentos\bin\Manual\manual_1.0.7.1.pdf
+C:\Sistemas\Investimentos\Investimentos\bin\Antlr3.Runtime.dll
+C:\Sistemas\Investimentos\Investimentos\bin\log4net.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.Common.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.Web.Infrastructure.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Newtonsoft.Json.dll
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.Helpers.dll
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.Mvc.dll
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.Optimization.dll
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.Razor.dll
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.Deployment.dll
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.dll
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.Razor.dll
+C:\Sistemas\Investimentos\Investimentos\bin\WebGrease.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Antlr3.Runtime.pdb
+C:\Sistemas\Investimentos\Investimentos\bin\log4net.xml
+C:\Sistemas\Investimentos\Investimentos\bin\Newtonsoft.Json.xml
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.Helpers.xml
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.Mvc.xml
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.Optimization.xml
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.Razor.xml
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.xml
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.Deployment.xml
+C:\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.Razor.xml
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.csproj.CopyComplete
+C:\Sistemas\Investimentos\Investimentos\bin\Investimentos.dll.config
+C:\Sistemas\Investimentos\Investimentos\bin\Investimentos.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Investimentos.pdb
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.Properties.Mensagens.resources
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.Properties.SQLQueriesIntegracao.resources
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.Properties.SQLQueries.resources
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.dll
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.pdb
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\RdlCompile.cache
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\RdlCompile.compiled
+C:\Sistemas\Investimentos\Investimentos\bin\Reports\ImprimirRendimento.rdlc
+C:\Sistemas\Investimentos\Investimentos\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Sistemas\Investimentos\Investimentos\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Sistemas\Investimentos\Investimentos\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Sistemas\Investimentos\Investimentos\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.Design.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.SqlServer.Types.dll
+C:\Sistemas\Investimentos\Investimentos\bin\EnvDTE.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Sistemas\Investimentos\Investimentos\bin\stdole.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Sistemas\Investimentos\Investimentos\bin\Microsoft.MSXML.dll
+C:\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Sistemas\Investimentos\Investimentos\bin\DotNet.Highcharts.dll
+C:\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.csprojAssemblyReference.cache
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Manual\manual_1.0.pdf
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Manual\manual_1.0.7.1.pdf
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Reports\ImprimirRendimento.rdlc
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Investimentos.dll.config
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Investimentos.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Investimentos.pdb
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Antlr3.Runtime.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\DotNet.Highcharts.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\log4net.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.Common.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.Design.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.SqlServer.Types.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.Web.Infrastructure.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Newtonsoft.Json.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.Helpers.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.Mvc.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.Optimization.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.Razor.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.Deployment.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.Razor.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\WebGrease.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\EnvDTE.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\stdole.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Microsoft.MSXML.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Antlr3.Runtime.pdb
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\log4net.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\Newtonsoft.Json.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.Helpers.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.Mvc.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.Optimization.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.Razor.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.Deployment.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\System.Web.WebPages.Razor.xml
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.Properties.Mensagens.resources
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.Properties.SQLQueriesIntegracao.resources
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.Properties.SQLQueries.resources
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.csproj.GenerateResource.cache
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.csproj.CoreCompileInputs.cache
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.csproj.CopyComplete
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.dll
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.pdb
+D:\Estudo\Sistemas\Investimentos\Investimentos\obj\Debug\Investimentos.csprojAssemblyReference.cache
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Manual\manual_1.0.pdf
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Manual\manual_1.0.7.1.pdf
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Reports\ImprimirRendimento.rdlc
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Investimentos.dll.config
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Investimentos.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Investimentos.pdb
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Antlr3.Runtime.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\DotNet.Highcharts.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\log4net.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.ReportViewer.Common.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.ReportViewer.Design.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.SqlServer.Types.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.Web.Infrastructure.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Newtonsoft.Json.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.Helpers.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.Mvc.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.Optimization.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.Razor.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.WebPages.Deployment.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.WebPages.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.WebPages.Razor.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\WebGrease.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\EnvDTE.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\stdole.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Microsoft.MSXML.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Antlr3.Runtime.pdb
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\log4net.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\Newtonsoft.Json.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.Helpers.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.Mvc.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.Optimization.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.Razor.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.WebPages.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.WebPages.Deployment.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\System.Web.WebPages.Razor.xml
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.csprojAssemblyReference.cache
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.Properties.Mensagens.resources
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.Properties.SQLQueriesIntegracao.resources
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.Properties.SQLQueries.resources
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.csproj.GenerateResource.cache
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.csproj.CoreCompileInputs.cache
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.csproj.CopyComplete
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.dll
+D:\Estudo\Pós - PUC\TCC - Sistema de Prestação de Serviços ao Cidadão\fontes\SisServ\Investimentos\obj\Debug\Investimentos.pdb

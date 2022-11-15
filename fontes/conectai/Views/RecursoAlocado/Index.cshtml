@@ -1,0 +1,96 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model IList<RecursoAlocado>
+@{
+	ViewBag.Title = Mensagens.STR_ALOCACAO_ATUAL_RECURSOS;
+
+	DotNet.Highcharts.Highcharts grafico = ViewBag.grafico;
+
+	IList<Cotacao> arrCotacoes = ViewBag.arrCotacoes;
+	int qtdePontosBOVESPA = ViewBag.qtdePontosBOVESPA;
+}
+@section scripts{
+}
+@section navegacaoTopo
+{
+}
+
+<ol class="breadcrumb" style="margin-top: 20px;">
+	<li class="active">@ViewBag.Title</li>
+</ol>
+
+@if (Model.Count > 0)
+{
+	<table id="tabela-recurso-alocado" class="table table-responsive table-bordered table-striped table-grid table-hover">
+		<thead>
+			<tr>
+				<th>@Mensagens.STR_CONSERVADOR</th>
+				<th>@Mensagens.STR_MODERADO</th>
+				<th>@Mensagens.STR_AGRESSIVO</th>
+				<th>@Mensagens.STR_ATUAL</th>
+				<th>@Mensagens.STR_ATUAL_RS</th>
+				<th>@Mensagens.STR_INVESTIMENTO</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var recursoAlocado in Model)
+			{
+				<tr>
+					<td class="text-right">@recursoAlocado.NrAlocacaoIndicadaConservador.ToString("N2")%</td>
+					<td class="text-right">@recursoAlocado.NrAlocacaoIndicadaModerado.ToString("N2")%</td>
+					<td class="text-right">@recursoAlocado.NrAlocacaoIndicadaAgressivo.ToString("N2")%</td>
+					<td class="text-right">@recursoAlocado.NrAlocacaoAtual.ToString("N2")%</td>
+					<td class="text-right">@recursoAlocado.VlSaldoAtual.ToString("C")</td>
+					<td>@recursoAlocado.GrupoInvestimento</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+	<div class="row">
+		<div class="col-md-6">
+			<ol class="breadcrumb" style="margin-top: 20px;">
+				<li class="active">@Mensagens.STR_COMPARATIVO_MENSAL</li>
+			</ol>
+			@grafico
+		</div>
+		<div class="col-md-6">
+			<ol class="breadcrumb" style="margin-top: 20px;">
+				<li class="active">@Mensagens.STR_IBOVESPA @qtdePontosBOVESPA.ToString("N0") pts</li>
+			</ol>
+			<table id="tabela-ibovespa" class="table table-responsive table-bordered table-striped table-grid table-hover">
+				<thead>
+					<tr>
+						<th>@Mensagens.STR_ACAO</th>
+						<th>@Mensagens.STR_COTACAO</th>
+						<th>@Mensagens.STR_PRECO_MEDIO</th>
+						<th>@Mensagens.STR_QUANTIDADE</th>
+						<th>@Mensagens.STR_LUCRO_PREJUIZO</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (Cotacao umaCotacao in arrCotacoes)
+					{
+						<tr>
+							<td class="text-right">@umaCotacao.CodigoAcao</td>
+							<td class="text-right">@umaCotacao.ValorCotacao.ToString("C")</td>
+							<td class="text-right">@umaCotacao.PrecoMedio.ToString("C")</td>
+							<td class="text-right">@umaCotacao.QtdeAcoes</td>
+							@if (umaCotacao.ValorLucroPrejuizo > 0)
+							{
+								<td class="text-right text-success">@umaCotacao.ValorLucroPrejuizo.ToString("C") <i class="fa fa-arrow-up" aria-hidden="true"></i></td>
+							}
+							else
+							{
+								<td class="text-right text-danger">@umaCotacao.ValorLucroPrejuizo.ToString("C") <i class="fa fa-arrow-down" aria-hidden="true"></i></td>
+							}
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+}

@@ -1,0 +1,32 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@functions
+{
+	//----------------------------------------------------------------------
+	//	static public
+	//----------------------------------------------------------------------
+	static public string fnGetStrData( System.DateTime? data )
+	{
+		if( data == null )
+			return ( "-" );
+
+		return ( data.Value.ToString( "dd/MM/yyyy" ) );
+	}
+
+	//----------------------------------------------------------------------------
+	static public string getAttrInputChecked( bool bChecked )
+	{
+		if( bChecked )
+			return ( "checked='checked'" );
+
+		return ( string.Empty );
+	}
+
+	//----------------------------------------------------------------------
+	static public IHtmlString getHtmltemSelecionado( System.Web.Mvc.HtmlHelper html, int idInformacao, int idValor )
+	{
+		if( idInformacao == idValor )
+			return ( html.Raw( "selected='selected'" ) );
+		else
+			return ( html.Raw( "" ) );
+	}
+}

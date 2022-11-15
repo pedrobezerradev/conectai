@@ -1,0 +1,12 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model Promotora
+@{
+	Promotora promotora = Model;
+}
+@if( promotora != null )
+{
+	<p class="form-control-static">
+		Nome: @promotora.Nome<br />
+		Cargo: @promotora.Cargo
+	</p>
+}

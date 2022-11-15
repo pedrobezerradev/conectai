@@ -1,0 +1,47 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model Demanda
+@{
+    Demanda demanda = Model;
+}
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label">@Mensagens.STR_TIPO_SERVICO:</label> @demanda.TipoServico.Descricao
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form id="form-avaliar-atendimento" method="post" action="@Url.Action( "AvaliarAtendimento", "Demanda" )">
+                        <input type="hidden" name="IdDemanda" id="input-demanda-id" value="@demanda.Id">
+
+                        <div class="form-group">
+                            <label for="input-nota-avaliacao" class="col-md-4 control-label">@Mensagens.STR_NOTA_AVALIACAO</label>
+                            <div class="col-md-4">
+                                <select class="form-control dados-nota-atendimento" id="input-nota-atendimento" name="NrNotaAtendimento">
+                                    @for (int nota = 1; nota <= 10; nota++)
+                                    {
+                                        <option value="@nota" @Shared.getHtmltemSelecionado(Html, nota, nota)> @nota </option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="modal-footer">
+            <button id="btn-avaliar-atendimento" type="button" class="btn btn-primary btn-sm"><i class="fa fa-check fa-fw"></i>&nbsp;Avaliar</button>
+            <button id="btn-cancel" type="button" class="btn btn-default btn-sm"><i class="fa fa-times fa-fw"></i>&nbsp;Fechar</button>
+        </div>
+    </div>
+</div>

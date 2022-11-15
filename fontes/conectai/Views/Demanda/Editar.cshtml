@@ -1,0 +1,69 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model Demanda
+@{
+	string txtAcao;
+
+	Demanda demanda = Model;
+	bool bInclusao = (demanda.Id == Demanda.ID_DEMANDA_INVALIDO);
+
+	if (bInclusao)
+	{
+		txtAcao = Mensagens.STR_INCLUIR_DEMANDA;
+	}
+	else
+	{
+		txtAcao = Mensagens.STR_EDITAR_DEMANDA; 
+	}
+	ViewBag.Title = txtAcao;
+
+}
+@section scripts{
+	<script src="~/Scripts/demanda/editar-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+<div class="panel panel-default" style="">
+	<div class="panel-heading">@txtAcao</div>
+	<div class="panel-body">
+
+        <form id="form-editar-demanda" class="form-horizontal" method="post" action="@Url.Action( "Salvar", "Demanda" )">
+            <input type="hidden" name="Id" id="input-demanda-id" value="@demanda.Id">
+            <hr />
+
+            <div class="form-group">
+                <label for="input-tipo-servico" class="col-md-3 control-label">@Mensagens.STR_TIPO_SERVICO</label>
+                <div class="col-md-3">
+                    <select class="form-control dados-tipo-servico" id="input-tipo-servico" name="IdTipoServico">
+                        <option value=@TipoServico.ID_TIPO_SERVICO_INVALIDO>@Mensagens.STR_SELECIONE_TIPO_SERVICO</option>
+                        @foreach (TipoServico umTipoServico in demanda.ArrTipoServico)
+                        {
+                            <option value="@umTipoServico.Id" @Shared.getHtmltemSelecionado(Html, demanda.TipoServico.Id, umTipoServico.Id)> @umTipoServico.Descricao </option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-observacao" class="col-md-3 control-label">@Mensagens.STR_OBSERVACOES<span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" id="input-observacao" name="Observacao" placeholder="@Mensagens.STR_OBSERVACAO" value="@demanda.Observacao" maxlength="@Demanda.TAM_MAX_OBSERVACAO" autofocus="autofocus">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <span class="text-danger form-control-static" style="font-size: .8em; text-align: right;">@Mensagens.STR_OBRIGATORIO</span>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-3">
+                    <button class="btn btn-default" id="button-salvar"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;OK</button>
+                    <a href="@Url.Action( "Index", "Demanda" )" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Cancelar</a>
+                </div>
+            </div>
+        </form>
+	</div>
+</div>

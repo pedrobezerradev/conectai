@@ -1,0 +1,261 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model IList<Advertencia>
+@{
+	ViewBag.Title = "Cadastro de Advertências";
+	ViewBag.historico = null;
+
+	const int NUM_COLUNAS = 9;
+
+	AdvertenciaFiltroForm filtroAdvertencia = (AdvertenciaFiltroForm)ViewBag.form;
+	IList<Advertencia> listaAdvertencias = Model;
+
+	int numLinhasExtras = 10;
+
+	if( Model != null )
+	{
+		if( Model.Count < numLinhasExtras )
+		{
+			numLinhasExtras = numLinhasExtras - Model.Count;
+		}
+		else
+		{
+			numLinhasExtras = 0;
+		}
+	}
+
+	var filtroDataDe = "";
+	if( filtroAdvertencia.DataAdvertenciaDe != "" )
+	{
+		filtroDataDe = filtroAdvertencia.DataAdvertenciaDe;
+	}
+	var filtroDataAte = "";
+	if( filtroAdvertencia.DataAdvertenciaAte != "" )
+	{
+		filtroDataAte = filtroAdvertencia.DataAdvertenciaAte;
+	}
+	var filtroMatricula = "";
+	if( filtroAdvertencia.Matricula != 0 )
+	{
+		filtroMatricula = filtroAdvertencia.Matricula.ToString();
+	}
+	var filtroSetor = "";
+	if( filtroAdvertencia.Setor != 0 )
+	{
+		filtroSetor = filtroAdvertencia.Setor.ToString();
+	}
+}
+@functions{
+	//----------------------------------------------------------------------
+	private IHtmlString getHtmlFiltro( bool bAtivo )
+	{
+		if( bAtivo )
+			return (Html.Raw( "style='color: firebrick'" ));
+
+		return (Html.Raw( "" ));
+	}
+}
+@section scripts
+{
+	<script src="~/Scripts/advertencia/cadastroAdvertencia-1.0.js"></script>
+	<script src="~/Scripts/advertencia/dlgJustificarExclusaoAdvertencia.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial( "../Shared/_BarraNavegacaoTopo" )
+}
+<div class="row">
+	<div class="col-md-4 col-md-offset-8" style="text-align: right; padding-bottom: 5px;" id="div-links-advertencia">
+		<a class="a-link-limpar btn btn-default btn-sm" href="#"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Ver Todas&nbsp;</a>
+		<a class="btn btn-default btn-sm" href="@Url.Action( "EditarAdvertencia", "Advertencia" )"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Nova&nbsp;</a>
+	</div>
+</div>
+<form class="form-inline" id="form-filtro-advertencia" action="@Url.Action( "CadastroAdvertencia", "Advertencia" )" style="display: none;">
+	<input type="hidden" name="nrPagina" />
+	<div class="col-md-3">
+		<input type="text" class="form-control" style="width: 110px;" id="input-data-de" name="DataAdvertenciaDe" value="@filtroDataDe" maxlength="@Advertencia.TAM_MAX_DATA_ADVERTENCIA">
+		<input type="text" class="form-control" style="width: 110px;" id="input-data-ate" name="DataAdvertenciaAte" value="@filtroDataAte" maxlength="@Advertencia.TAM_MAX_DATA_ADVERTENCIA">
+	</div>
+	<div class="col-md-3">
+		<label>Setor:</label>
+		<input type="text" class="form-control" style="width: 100px;" id="input-setor" name="Setor" value="@filtroSetor" maxlength="@Advertencia.TAM_MAX_SETOR">
+	</div>
+	<div class="col-md-3">
+		<label>Matrícula:</label>
+		<input type="text" class="form-control" style="width: 100px;" id="input-matricula" name="Matricula" value="@filtroMatricula" maxlength="@Advertencia.TAM_MAX_MATRICULA">
+	</div>
+	<div class="col-md-3">
+		<a class="a-link-aplicar btn btn-default btn-sm" href="#">Aplicar</a>
+	</div>
+</form>
+@if( listaAdvertencias.Count == 0 )
+{
+	<div class="row" style="margin-top: 10px;">
+		<div class="col-md-12">
+			<div class="alert alert-warning" role="alert">
+				<p class="text-center"><strong>Não existem advertências cadastradas</strong></p>
+			</div>
+		</div>
+	</div>
+}
+else
+{
+	<br />
+	<table id="tabela-advertencia" class="table table-responsive table-bordered table-striped table-grid table-hover">
+		<thead>
+			<tr>
+				<th>
+					Data de <div style="white-space: nowrap;">Cadastro&nbsp;
+					<!-- Filtro Data de Cadastro -->
+					<div class="btn-group">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="img-refresh-datas fa fa-refresh fa-spin fa-fw" style="display: none;"></i>
+							<i class="img-filter-datas fa fa-filter" aria-hidden="true" @getHtmlFiltro( filtroAdvertencia.ehFiltroDataAtivo() )></i><span class="caret" @getHtmlFiltro( filtroAdvertencia.ehFiltroDataAtivo() )></span>
+						</a>
+						<div class="dropdown-menu" style="padding: 5px;">
+							<label style="color:black;"> Entre com um intervalo:</label>
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon" style="padding-left: 5px; padding-right: 3px;" title="Data de cadastro a partir do dia">de&nbsp;</span>
+								<input type="text" class="form-control" placeholder="dd/mm/aaaa" title="Data de cadastro a partir do dia" id="filtro-data-de" value="@filtroDataDe" data-toggle="tooltip" data-placement="left" style="text-align: right;" maxlength="10" />
+							</div>
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon" style="padding-left: 5px; padding-right: 3px;" title="Data de cadastro até o dia">até</span>
+								<input type="text" class="form-control" placeholder="dd/mm/aaaa" title="Data de cadastro até o dia" id="filtro-data-ate" value="@filtroDataAte" data-toggle="tooltip" data-placement="left" style="text-align: right;" maxlength="10" />
+							</div>
+							<hr />
+							<div class="btn-group btn-group-sm btn-group-justified" role="group" style="margin: 10px 0;">
+								<a class="a-link-aplicar btn btn-default btn-sm" href="#">Aplicar</a>
+								<a class="a-link-limpar-datas btn btn-default btn-sm" href="#">Limpar</a>
+							</div>
+						</div>
+					</div></div>
+					<!-- Fim Filtro Data de Cadastro -->
+				</th>
+				<th style="white-space: nowrap;">
+					Setor&nbsp;
+					<!-- Filtro Setor -->
+					<div class="btn-group">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="img-refresh-setor fa fa-refresh fa-spin fa-fw" style="display: none;"></i>
+							<i class="img-filter-setor fa fa-filter" aria-hidden="true" @getHtmlFiltro( filtroAdvertencia.ehFiltroSetorAtivo() )></i><span class="caret" @getHtmlFiltro( filtroAdvertencia.ehFiltroSetorAtivo() )></span>
+						</a>
+						<div class="dropdown-menu" style="padding: 5px;">
+							<label style="color:black;"> Setor:</label>
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control" placeholder="Setor" title="Setor" style="border-radius: 3px;" id="filtro-setor" value="@filtroSetor">
+							</div>
+							<hr />
+							<div class="btn-group btn-group-sm btn-group-justified" role="group" style="margin: 10px 0;">
+								<a class="a-link-aplicar btn btn-default btn-sm" href="#">Aplicar</a>
+								<a class="a-link-limpar-setor btn btn-default btn-sm" href="#">Limpar</a>
+							</div>
+						</div>
+					</div>
+					<!-- Fim Filtro Setor -->
+				</th>
+				<th style="white-space: nowrap;">
+					Matrícula&nbsp;
+					<!-- Filtro Matricula -->
+					<div class="btn-group">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="img-refresh-matricula fa fa-refresh fa-spin fa-fw" style="display: none;"></i>
+							<i class="img-filter-matricula fa fa-filter" aria-hidden="true" @getHtmlFiltro( filtroAdvertencia.ehFiltroMatriculaAtivo() )></i><span class="caret" @getHtmlFiltro( filtroAdvertencia.ehFiltroMatriculaAtivo() )></span>
+						</a>
+						<div class="dropdown-menu" style="padding: 5px;">
+							<label style="color:black;"> Matrícula:</label>
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control" placeholder="Matrícula" title="Matrícula" style="border-radius: 3px;" id="filtro-matricula" value="@filtroMatricula">
+							</div>
+							<hr />
+							<div class="btn-group btn-group-sm btn-group-justified" role="group" style="margin: 10px 0;">
+								<a class="a-link-aplicar btn btn-default btn-sm" href="#">Aplicar</a>
+								<a class="a-link-limpar-matricula btn btn-default btn-sm" href="#">Limpar</a>
+							</div>
+						</div>
+					</div>
+					<!-- Fim Filtro Matricula -->
+				</th>
+				<th style="width: 100%;">Nome</th>
+				<th>Tipo</th>
+				<th>Motivo</th>
+				<th>Data de Confirmação</th>
+				<th>Campanha</th>
+				<th title="Ações">&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach( var advertencia in listaAdvertencias )
+			{
+				<tr>
+					<td> @Shared.fnGetStrData( @advertencia.DataAdvertencia ) </td>
+					<td> @advertencia.Setor </td>
+					<td> @advertencia.NrMatricula </td>
+					<td> @advertencia.NomeUsuarioMatricula </td>
+					<td> @advertencia.DescricaoTipo </td>
+					<td> @advertencia.DescricaoMotivo </td>
+					<td> @Shared.fnGetStrData( @advertencia.DataLimiteConfirmacao ) </td>
+					@if( advertencia.Campanha.Codigo != 0 )
+					{
+						<td>@advertencia.Campanha.Codigo/@advertencia.Campanha.NrAno</td>
+					}
+					else
+					{
+						<td>&nbsp;</td>
+					}
+					<td style="white-space:nowrap;">
+						<a class="a-link-editar" href="@Url.Action( "EditarAdvertencia", "Advertencia", new { id = @advertencia.Id } )" id="@advertencia.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;editar</a><br />
+						<a class="a-link-excluir-advertencia" href="@Url.Action( "ExcluirAdvertencia", "Advertencia", new { id = @advertencia.Id } )" id="@advertencia.Id" data-advertencia="@Shared.fnGetStrData( @advertencia.DataAdvertencia )" data-nome-usuario="@advertencia.NomeUsuarioMatricula"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;excluir</a><br />
+						<a class="a-link-imprimir-advertencia" href="@Url.Action( "ImprimirAdvertencia", "Advertencia", new { id = @advertencia.Id } )" id="@advertencia.Id" target="_blank"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;imprimir</a>
+					</td>
+				</tr>
+			}
+			@for( int index = 0; index < numLinhasExtras; index++ )
+			{
+				<tr>
+					@for( int cols = 0; cols < NUM_COLUNAS; cols++ )
+					{
+						<td>&nbsp;</td>
+					}
+				</tr>
+			}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td id="div-navegacao-paginas" colspan="@NUM_COLUNAS" style="text-align: right; font-weight: bold;">
+					<nav>
+						<ul class="pagination">
+							<li>
+								<span>
+									Ir para a página:
+									<select id="select-navegar-para">
+										@for( int numPag = 1; numPag <= ViewBag.paginacao.UltimaPagina; numPag++ )
+										{
+											if( numPag == @ViewBag.paginacao.PaginaAtual )
+											{
+												<option value="@numPag" selected="selected">@numPag</option>
+											}
+											else
+											{
+												<option value="@numPag"> @numPag </option>
+											}
+										}
+									</select>
+									<span>de @ViewBag.paginacao.UltimaPagina</span>
+									<input type="hidden" id="input-paginacao-atual" value="@ViewBag.paginacao.PaginaAtual" />
+									<input type="hidden" id="input-ultima-paginacao" value="@ViewBag.paginacao.UltimaPagina" />
+									<input type="hidden" id="input-numitens-atual" value="@ViewBag.paginacao.NumItensPorPag" />
+									<input type="hidden" id="input-numtotal-itens" value="@ViewBag.paginacao.NumTotalItens" />
+								</span>
+							</li>
+							<li><a href="#" class="a-link-navegacao" title="Ir para primeira página" data-ind-pag="@ViewBag.paginacao.PrimeiraPagina"><i class="fa fa-caret-left" aria-hidden="true"></i><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="a-link-navegacao" title="Ir para página anterior" data-ind-pag="@ViewBag.paginacao.PagAnt"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="a-link-navegacao" title="Ir para próxima página" data-ind-pag="@ViewBag.paginacao.ProxPag"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="a-link-navegacao" title="Ir para última página" data-ind-pag="@ViewBag.paginacao.UltimaPagina"><i class="fa fa-caret-right" aria-hidden="true"></i><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+							<li><span> @ViewBag.paginacao.IndPrimItem - @ViewBag.paginacao.IndUltimoItem de @ViewBag.paginacao.NumTotalItens</span></li>
+						</ul>
+					</nav>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+}
+<div class="modal" tabindex="-1" role="dialog" id="div-modal-justificar-exclusao" data-backdrop="static" data-keyboard="false" style="display: none;"></div>

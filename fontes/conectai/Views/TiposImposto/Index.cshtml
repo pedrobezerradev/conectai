@@ -1,0 +1,82 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model IList<TipoImposto>
+@{
+	ViewBag.Title = Mensagens.STR_TIPOS_IMPOSTO;
+
+	const int NUM_COLUNAS = 3;
+
+	int numLinhasExtras = 10;
+
+	if (Model != null)
+	{
+		if (Model.Count < numLinhasExtras)
+		{
+			numLinhasExtras = numLinhasExtras - Model.Count;
+		}
+		else
+		{
+			numLinhasExtras = 0;
+		}
+	}
+}
+@section scripts{
+	<script src="~/Scripts/tipoImposto/index-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+<div class="row">
+	<div class="col-md-4 col-md-offset-8" style="text-align: right; padding-bottom: 5px;">
+		<a class="btn btn-default" href="@Url.Action( "Editar", "TiposImposto" )"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Novo&nbsp;</a>
+	</div>
+</div>
+@if (Model.Count == 0)
+{
+	<div class="row" style="margin-top: 10px;">
+		<div class="col-md-12">
+			<div class="alert alert-warning" role="alert">
+				<p class="text-center"><strong>@Mensagens.STR_NAO_EXISTEM_TIPOS_IMPOSTO_CADASTRADO</strong></p>
+			</div>
+		</div>
+	</div>
+}
+else
+{
+	<table id="tabela-tipo-imposto" class="table table-responsive table-bordered table-striped table-grid table-hover">
+		<thead>
+			<tr>
+				<th>@Mensagens.STR_SIGLA</th>
+				<th>@Mensagens.STR_DESCRICAO</th>
+				<th title="@Mensagens.STR_ACOES">&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var tipoImposto in Model)
+			{
+				<tr class="a-link-consultar">
+					<td>@tipoImposto.Sigla</td>
+					<td>@tipoImposto.Descricao</td>
+					<td style="white-space:nowrap; text-align: right;">
+						<a class="a-link-editar" href="@Url.Action( "Editar", "TiposImposto", new { idTipoImposto = @tipoImposto.Id } )" id="@tipoImposto.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;editar</a>&nbsp;
+						<a class="a-link-excluir" href="@Url.Action( "Excluir", "TiposImposto", new { idTipoImposto = @tipoImposto.Id } )" id="@tipoImposto.Id" data-sigla-tipo-imposto="@tipoImposto.Sigla"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;excluir</a>
+					</td>
+				</tr>
+			}
+			@for (int index = 0; index < numLinhasExtras; index++)
+			{
+				<tr>
+					@for (int cols = 0; cols < NUM_COLUNAS; cols++)
+					{
+						<td>&nbsp;</td>
+					}
+				</tr>
+			}
+		</tbody>
+		@Html.Partial("_CommonPaginacao", NUM_COLUNAS)
+	</table>
+	<form id="form-preencher-lista" action="@Url.Action( "Index", "TiposImposto" )">
+		<input type="hidden" name="nrPagina" />
+	</form>
+}

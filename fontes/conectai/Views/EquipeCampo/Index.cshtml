@@ -1,0 +1,22 @@
+﻿@using Conectai.Properties
+@{
+    ViewBag.Title = Mensagens.STR_EQUIPE_CAMPO;
+}
+@section navegacaoTopo
+{
+    @Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+@section scripts {
+}
+<div class="row" style="margin-top: 20px;">
+    <div class="col-md-12">
+        <ul>
+            <li role="presentation">
+                <a href="~/Demanda/DemandasEquipeCampo">@Mensagens.STR_CHAMADOS</a>
+            </li>
+            <li role="presentation">
+                <a href="~/Demanda/MapaMunicipio">@Mensagens.STR_DEMANDA_MAPA_MUNICIPIO</a>
+            </li>
+        </ul>
+    </div>
+</div>

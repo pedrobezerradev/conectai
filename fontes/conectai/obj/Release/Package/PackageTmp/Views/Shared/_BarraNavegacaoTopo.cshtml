@@ -1,0 +1,24 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@{
+	Usuario usuario = (Usuario)Session["usuario"];
+
+	KeyValuePair<string, string>[] historico = (KeyValuePair<string, string>[])ViewBag.historico;
+}
+@if( usuario == null )
+{
+	<br />
+}
+else
+{
+	<ol class="breadcrumb" style="margin-top: 10px;">
+		<li><a href="@Url.Action( "Index", "Sistema" )"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Início</a></li>
+		@if( historico != null )
+		{
+			foreach( KeyValuePair<string, string> umHistorico in historico )
+			{
+				<li><a href="@umHistorico.Value">@umHistorico.Key</a></li>
+			}
+		}
+		<li class="active">@ViewBag.Title</li>
+	</ol>
+}

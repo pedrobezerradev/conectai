@@ -1,0 +1,62 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model TipoImposto
+@{
+	string txtAcao;
+
+	TipoImposto tipoImposto = Model;
+
+	bool bInclusao = (tipoImposto.Id == TipoImposto.ID_TIPO_IMPOSTO_INVALIDO);
+
+	if (bInclusao)
+	{
+		txtAcao = Mensagens.STR_INCLUIR_TIPO_IMPOSTO;
+	}
+	else
+	{
+		txtAcao = Mensagens.STR_EDITAR_TIPO_IMPOSTO;
+	}
+	ViewBag.Title = txtAcao;
+
+}
+@section scripts{
+	<script src="~/Scripts/tipoImposto/editar-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+<div class="panel panel-default" style="">
+	<div class="panel-heading">@txtAcao</div>
+	<div class="panel-body">
+
+        <form id="form-editar-tipo-imposto" class="form-horizontal" method="post" action="@Url.Action( "Salvar", "TiposImposto" )">
+            <input type="hidden" name="Id" id="input-tipo-imposto-id" value="@tipoImposto.Id">
+            <hr />
+            <div class="form-group">
+                <label for="input-sigla-tipo-imposto" class="col-md-3 control-label">@Mensagens.STR_SIGLA<span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" id="input-sigla-tipo-imposto" name="Sigla" placeholder="@Mensagens.STR_SIGLA" value="@tipoImposto.Sigla" maxlength="@TipoImposto.TAM_MAX_SIGLA" autofocus="autofocus">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="input-descricao-tipo-imposto" class="col-md-3 control-label">@Mensagens.STR_DESCRICAO<span class="text-danger">*</span></label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" id="input-descricao-tipo-imposto" name="Descricao" placeholder="@Mensagens.STR_DESCRICAO" value="@tipoImposto.Descricao" maxlength="@TipoImposto.TAM_MAX_DESCRICAO" autofocus="autofocus">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <span class="text-danger form-control-static" style="font-size: .8em; text-align: right;">@Mensagens.STR_OBRIGATORIO</span>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-3">
+                    <button class="btn btn-default" id="button-salvar"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;OK</button>
+                    <a href="@Url.Action( "Index", "TiposImposto" )" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Cancelar</a>
+                </div>
+            </div>
+        </form>
+	</div>
+</div>

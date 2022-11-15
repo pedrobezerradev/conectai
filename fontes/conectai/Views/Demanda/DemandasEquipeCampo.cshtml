@@ -1,0 +1,120 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model IList<Demanda>
+@{
+    ViewBag.Title = Mensagens.STR_MINHAS_DEMANDAS;
+    ViewBag.historico = null;
+
+    const int NUM_COLUNAS = 7;
+
+    int numLinhasExtras = 10;
+
+    if (Model != null)
+    {
+        if (Model.Count < numLinhasExtras)
+        {
+            numLinhasExtras = numLinhasExtras - Model.Count;
+        }
+        else
+        {
+            numLinhasExtras = 0;
+        }
+    }
+
+    //FILTRO
+    int filtroStatusDemanda = ViewBag.filtroStatusDemanda;
+    IList<StatusDemanda> arrStatusDemanda = ViewBag.arrStatusDemanda;
+
+}
+@section scripts{
+    <script src="~/Scripts/demanda/demandaEquipeCampo-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+    @Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+<form id="form-preencher-lista" class="form-horizontal bg-info" action="@Url.Action( "DemandasEquipeCampo", "Demanda" )" style="padding-top: 5px; padding-bottom: 5px; margin-bottom: 10px;">
+    <input type="hidden" name="nrPagina" />
+
+    <div class="row" id="filtro-demanda">
+        <div class="col-md-12 form-check-inline">
+            <div class="col-md-1 text-right">
+                <label class="control-label">@Mensagens.STR_STATUS:</label>
+            </div>
+            <div class="col-md-2">
+                <select id="select-status-demanda" class="form-control" name="filtroStatusDemanda">
+                    <option value="-1">@Mensagens.STR_SELECIONE</option>
+                    @foreach (StatusDemanda umStatusDemanda in arrStatusDemanda)
+                    {
+                        <option @Shared.getHtmltemSelecionado(Html, filtroStatusDemanda, umStatusDemanda.Id) value="@umStatusDemanda.Id">@umStatusDemanda.Descricao</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-3" id="filtro-teste">
+                <a href="#" id="a-filtrar" class="btn btn-primary">Filtrar <i class="fa fa-search ml-1"></i></a>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="nrPagina" />
+</form>
+
+@if (Model.Count == 0)
+{
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-12">
+            <div class="alert alert-warning" role="alert">
+                <p class="text-center"><strong>@Mensagens.STR_NAO_EXISTEM_DEMANDAS_PARA_O_FILTRO</strong></p>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <table id="tabela-demanda" class="table table-responsive table-bordered table-striped table-grid table-hover">
+        <thead>
+            <tr>
+                <th>@Mensagens.STR_NUMERO_DEMANDA</th>
+                <th>@Mensagens.STR_TIPO_SERVICO</th>
+                <th>@Mensagens.STR_STATUS_DEMANDA</th>
+                <th>@Mensagens.STR_DATA_ABERTURA</th>
+                <th>@Mensagens.STR_DATA_ENCERRAMENTO</th>
+                <th>@Mensagens.STR_OBSERVACOES</th>
+                <th title="@Mensagens.STR_ACOES">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var demanda in Model)
+            {
+                <tr class="a-link-consultar">
+                    <td>@demanda.Id</td>
+                    <td>@demanda.TipoServico.Descricao</td>
+                    <td>@demanda.StatusDemanda.Descricao</td>
+                    <td>@demanda.DtAbertura</td>
+                    <td>@demanda.DtEncerramento</td>
+                    <td>@demanda.Observacao</td>
+                    <td style="white-space:nowrap; text-align: right;">
+                        @if (demanda.StatusDemanda.Id == Const.ID_STATUS_DEMANDA_EM_ABERTO)
+                        {
+                            <a class="a-link-assumir" href="@Url.Action( "Assumir", "Demanda", new { id = @demanda.Id } )" id="@demanda.Id" data-id-demanda="@demanda.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;assumir</a>
+
+                        }
+                        @if (demanda.StatusDemanda.Id == Const.ID_STATUS_DEMANDA_EM_ANDAMENTO)
+                        {
+                            <a class="a-link-finalizar" href="@Url.Action( "Finalizar", "Demanda", new { id = @demanda.Id } )" id="@demanda.Id" data-id-demanda="@demanda.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;finalizar</a>
+                        }
+                    </td>
+                </tr>
+            }
+            @for (int index = 0; index < numLinhasExtras; index++)
+            {
+                <tr>
+                    @for (int cols = 0; cols < NUM_COLUNAS; cols++)
+                    {
+                        <td>&nbsp;</td>
+                    }
+                </tr>
+            }
+        </tbody>
+        @Html.Partial("_CommonPaginacao", NUM_COLUNAS)
+    </table>
+}

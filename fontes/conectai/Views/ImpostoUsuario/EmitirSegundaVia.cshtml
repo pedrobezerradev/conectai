@@ -1,0 +1,65 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model IList<TipoImposto>
+@{
+    IList<TipoImposto> arrTiposImposto = Model;
+
+    string txtAcao = Mensagens.STR_CONSULTAR_EMITIR_SEGUNDA_VIA_IMPOSTOS;
+    ViewBag.Title = txtAcao;
+
+}
+@section scripts{
+	<script src="~/Scripts/impostoUsuario/emitirSegundaVia-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+<div class="panel panel-default" style="">
+	<div class="panel-heading">@txtAcao</div>
+	<div class="panel-body">
+
+        <form id="form-emitir-segunda-via" class="form-horizontal" method="post" action="@Url.Action( "GerarSegundaVia", "ImpostoUsuario" )">
+            <hr />
+            <div class="form-group">
+                <label for="input-tipo-imposto" class="col-md-3 control-label">@Mensagens.STR_TIPO_IMPOSTO<span class="text-danger">*</span></label>
+                <div class="col-md-3">
+                    <select class="form-control dados-tipo-imposto" id="input-tipo-imposto" name="IdTipoImposto">
+                        <option value=@TipoImposto.ID_TIPO_IMPOSTO_INVALIDO>@Mensagens.STR_SELECIONE_TIPO_IMPOSTO</option>
+                        @foreach (TipoImposto umTipoImposto in arrTiposImposto)
+                        {
+                            <option value="@umTipoImposto.Id"> @umTipoImposto.Sigla </option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-ano" class="col-md-3 control-label">@Mensagens.STR_ANO<span class="text-danger">*</span></label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="input-ano" name="Ano" placeholder="@Mensagens.STR_ANO" value="" maxlength="@ImpostoUsuario.TAM_MAX_ANO" autofocus="autofocus">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-cpf" class="col-md-3 control-label">@Mensagens.STR_CPF<span class="text-danger">*</span></label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="input-cpf" name="Cpf" placeholder="@Mensagens.STR_CPF" value="" maxlength="@ImpostoUsuario.TAM_MAX_CPF" autofocus="autofocus">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-3">
+                    <span class="text-danger form-control-static" style="font-size: .8em; text-align: right;">@Mensagens.STR_OBRIGATORIO</span>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-3">
+                    <button class="btn btn-default" id="button-gerar"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Gerar</button>
+                    <a href="@Url.Action( "EmitirSegundaVia", "ImpostoUsuario" )" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Cancelar</a>
+                </div>
+            </div>
+        </form>
+	</div>
+</div>

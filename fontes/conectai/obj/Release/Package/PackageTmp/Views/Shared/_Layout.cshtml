@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<title>Sistema de Advertência - @ViewBag.Title</title>
+	<link type="text/css" href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+	<link type="text/css" href="~/Content/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+	<link type="text/css" href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+	<link type="text/css" href="~/Content/css/site-1.0.css" rel="stylesheet" />
+	@RenderSection( "styles", required: false )
+</head>
+<body>
+	<div class="container-fluid body-content">
+		@RenderBody()
+		@Html.Partial("_Rodape")
+		<div class='modal' tabindex='-1' role='dialog' id="div-ajax-loading" style="display: none;">
+			<div class='modal-dialog modal-sm' role='document' style="width: 200px;">
+				<div class='modal-content'>
+					<div class='modal-body' style="text-align: center;">
+						<h5><i class="fa fa-refresh fa-spin fa-fw"></i><span>&nbsp;Aguarde...</span></h5>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/moment")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+	<script src="~/Scripts/global/gCommonString.js"></script>
+	<script src="~/Scripts/global/gCommonAjax.js"></script>
+	<script src="~/Scripts/global/gCommon.js"></script>
+	<script src="~/Scripts/global/gCommonRodape.js"></script>
+	<script src="~/Scripts/global/gCommonSobre.js"></script>
+	<script type="text/javascript">
+		$( function ()
+		{
+			// Variável Global
+			$.Portal_RAIZ = '@Url.Content("~")';
+
+			loadStrings( $ );
+
+			CommonAjax.ajaxInit( $ );
+		} );
+	</script>
+</body>
+</html>

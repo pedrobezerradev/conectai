@@ -1,0 +1,24 @@
+﻿@using Conectai.Models.Data
+@using Conectai.Properties
+@{
+    ViewBag.Title = Mensagens.STR_CIDADAO;
+    Usuario usuario = (Usuario)Session["usuario"];
+}
+@section navegacaoTopo
+{
+    @Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+@section scripts {
+}
+<div class="row" style="margin-top: 20px;">
+    <div class="col-md-12">
+        <ul>
+            <li role="presentation">
+                <a href="@Url.Action("Index", "Demanda", new { idUsuario = usuario.Id })">@Mensagens.STR_MINHAS_DEMANDAS</a>
+            </li>
+            <li role="presentation">
+                <a href="@Url.Action("EmitirSegundaVia", "ImpostoUsuario")">@Mensagens.STR_CONSULTAR_EMITIR_SEGUNDA_VIA_IMPOSTOS</a>
+            </li>
+        </ul>
+    </div>
+</div>

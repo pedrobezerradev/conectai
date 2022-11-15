@@ -1,0 +1,22 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model Setor
+@{
+	Setor setor = Model;
+}
+@if( setor != null )
+{
+	<p class="form-control-static">
+		Departamento: @setor.Departamento<br />
+		@if ( setor.UltimaOcorrencia != null)
+		{
+			<b>Última Ocorrência: @Shared.fnGetStrData( @setor.UltimaOcorrencia) </b><br />
+		}
+		else
+		{
+			<b>Última Ocorrência: Não existem ocorrências </b><br />
+		}
+		<b>Total de Advertências: @setor.TotalAdvertencias &nbsp;&nbsp;&nbsp;&nbsp;Total de Suspensões: @setor.TotalSuspensoes</b>
+	</p>
+	<input type="hidden" id="input-total-advertencias" value="@setor.TotalAdvertencias">
+	<input type="hidden" id="input-total-suspensoes" value="@setor.TotalSuspensoes">
+}

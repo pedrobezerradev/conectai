@@ -1,0 +1,69 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model Motivo
+@{
+	string txtAcao;
+	Motivo motivo = Model;
+	bool bInclusao = (motivo.Codigo == Motivo.ID_MOTIVO_INVALIDO);
+	if ( motivo.Codigo == Motivo.ID_MOTIVO_INVALIDO )
+	{
+		txtAcao = "Incluir Motivo";
+	}
+	else
+	{
+		txtAcao = "Editar Motivo";
+	}
+	ViewBag.Title = txtAcao;
+
+	KeyValuePair<string, string>[] historico =
+	{
+		new KeyValuePair<string, string>( "Cadastro de Motivos", Url.Action( "CadastroMotivo", "Motivo" ) )
+	};
+	ViewBag.historico = historico;
+}
+@section scripts{
+	<script src="~/Scripts/motivo/editarMotivo-1.0.js"></script>
+}	
+@section navegacaoTopo
+{
+	@Html.Partial( "../Shared/_BarraNavegacaoTopo" )
+}
+<div class="panel panel-default" style="">
+	<div class="panel-heading">@txtAcao</div>
+	<div class="panel-body">
+		<form id="form-editar-motivo" class="form-horizontal" method="post" action="@Url.Action( "SalvarMotivo", "Motivo" )">
+			<input type="hidden" name="Id" id="input-motivo-id" value="@motivo.Codigo" />
+			<div class="form-group">
+				<label for="input-codigo-motivo" class="col-md-3 control-label">Código<span class="text-danger">*</span></label>
+				<div class="col-md-2">
+					@if ( bInclusao )
+					{
+						<input type="text" class="form-control" id="input-codigo-motivo" name="Codigo" placeholder="Código" maxlength="@Motivo.TAM_MAX_CODIGO_MOTIVO" autofocus/>
+					}
+					else
+					{
+						<input type="text" class="form-control" id="input-codigo-motivo" name="Codigo" value="@motivo.Codigo" disabled/>
+					}
+				</div>
+			</div>
+			<hr />
+			<div class="form-group">
+				<label for="input-descricao-motivo" class="col-md-3 control-label">Descrição<span class="text-danger">*</span></label>
+				<div class="col-md-7">
+					<input type="text" class="form-control" id="input-descricao-motivo" name="Descricao" placeholder="Descrição" value="@motivo.Descricao" maxlength="@Motivo.TAM_MAX_DESCRICAO_MOTIVO" autofocus="autofocus">
+				</div>		
+			</div>
+			<div class="form-group">
+				<div class="col-md-3">
+					<span class="text-danger form-control-static" style="font-size: .8em; text-align: right;">* obrigatório</span>
+				</div>
+			</div>
+			<hr />
+			<div class="form-group">
+				<div class="col-md-9 col-md-offset-3">
+					<button class="btn btn-default" id="button-editar"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;OK</button>
+					<a href="@Url.Action( "CadastroMotivo", "Motivo" )" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Cancelar</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

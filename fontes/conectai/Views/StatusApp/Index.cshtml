@@ -1,0 +1,32 @@
+﻿
+@{
+	ViewBag.Title = "Status App";
+
+	var estiloDivErro = "display: none;";
+	var msgErro = string.Empty;
+
+	if( ViewBag.erros != null )
+	{
+		estiloDivErro = string.Empty;
+		//	pega somente o 1o erro
+		foreach( var umErro in ViewBag.erros )
+		{
+			msgErro = umErro;
+			break;
+		}
+	}
+}
+<div class="container" style="text-align: center; margin-top: 80px; width: 400px;">
+	<h1>Acesso Restrito</h1>
+	<form id="form-login" action="@Url.Action( "Login", "StatusApp" )" method="post" class="form-inline">
+		<div class="form-group">
+			<label for="input-senha">Senha:</label>
+			<input class="form-control" id="input-senha" name="Senha" type="password" placeholder="Senha" autocomplete="off" data-clear-btn="true" autofocus />
+		</div>
+		<input type="submit" value="Entrar" class="btn btn-default" />
+	</form>
+	<br />
+	<div class="alert alert-danger div-msg-erro" role="alert" style="@estiloDivErro">
+		<a href="#" class="alert-link"><span class="span-msg-erro">@Html.Raw( msgErro )</span></a>
+	</div>
+</div>

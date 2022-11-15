@@ -1,0 +1,60 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model Demanda
+@{
+    ViewBag.Title = Mensagens.STR_INDICADORES_DEMANDA;
+
+    int demandasEmAberto    = ViewBag.demandasEmAberto;
+    int demandasEmAndamento = ViewBag.demandasEmAndamento;
+    int demandasFinalizadas = ViewBag.demandasFinalizadas;
+}
+@section scripts{
+}
+@section navegacaoTopo
+{
+    @Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+
+<div class="row">
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-2">
+        <div class="card bg-danger">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasEmAberto</h2>
+                <p class="card-text text-center">DEMANDAS EM ABERTO</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-warning">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasEmAndamento</h2>
+                <p class="card-text text-center">DEMANDAS EM ANDAMENTO</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card bg-success">
+            <div class="card-body">
+                <h2 class="card-title text-center">@demandasFinalizadas</h2>
+                <p class="card-text text-center">DEMANDAS FINALIZADAS</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>
+</div>

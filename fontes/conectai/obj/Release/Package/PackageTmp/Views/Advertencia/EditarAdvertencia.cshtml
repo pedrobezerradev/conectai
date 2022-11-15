@@ -1,0 +1,269 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model Advertencia
+@{
+	string txtAcao;
+
+	Advertencia advertencia = Model;
+	Promotora promotora = (Promotora)ViewBag.promotora;
+	Setor setor = (Setor)ViewBag.setor;
+	bool bInclusao = ( advertencia.Id == Advertencia.ID_ADVERTENCIA_INVALIDO );
+	TipoAdvertencia tipoAdvertencia = (TipoAdvertencia)ViewBag.tipoAdvertencia;
+	string bConfirmado = null;
+
+	if ( bInclusao )
+	{
+		txtAcao = "Incluir Advertência";
+	}
+	else
+	{
+		if( advertencia.StConfirmacao )
+		{
+			bConfirmado = "S";
+			txtAcao = "Consultar Advertência";
+		}
+		else
+		{
+			bConfirmado = "N";
+			txtAcao = "Editar Advertência";
+		}
+	}
+	ViewBag.Title = txtAcao;
+
+	KeyValuePair<string, string>[] historico =
+	{
+		new KeyValuePair<string, string>( "Cadastro de Advertências", Url.Action( "CadastroAdvertencia", "Advertencia" ) )
+	};
+	ViewBag.historico = historico;
+}
+@section scripts{
+	<script src="~/Scripts/advertencia/editarAdvertencia-1.0.js"></script>
+	<script src="~/Scripts/advertencia/dlgImprimirNovaAdvertencia-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial( "../Shared/_BarraNavegacaoTopo" )
+}
+<div class="panel panel-default" style="">
+	<div class="panel-heading">@txtAcao</div>
+	<div class="panel-body">
+@if (!bInclusao && advertencia.StConfirmacao)
+{
+	<div class="row">
+		<div class="col-md-12">
+			<div class="alert alert-warning" role="alert">
+				Advertência já confirmada não pode ser alterada.
+			</div>
+		</div>
+	</div>
+}
+		<form id="form-editar-advertencia" class="form-horizontal" method="post" action="@Url.Action( "SalvarAdvertencia", "Advertencia" )">
+			<input type="hidden" name="Id" id="input-advertencia-id" value="@advertencia.Id">
+			<input type="hidden" name="confirmado" id="hdn-confirmado" value="@bConfirmado" />
+			<div class="form-group"> 
+				<label for="input-data" class="col-md-3 control-label">Data de Cadastro<span class="text-danger">*</span></label>
+				@if( bInclusao )
+				{
+					<div class="col-md-2">
+						<div id="dt-advertencia" class="input-group">
+							<input type="text" class="form-control" id="input-data-advertencia" name="DataAdvertencia" placeholder="dd/mm/aaaa" title="dd/mm/aaaa" value="@Shared.fnGetStrData( @advertencia.DataAdvertencia )" maxlength="@Advertencia.TAM_MAX_DATA_ADVERTENCIA">
+							<span class="input-group-addon">
+								<span class="fa fa-calendar"></span>
+							</span>
+						</div>
+					</div>
+				}
+				else
+				{
+					<div class="col-md-2">
+						<input type="text" class="form-control" value="@Shared.fnGetStrData( @advertencia.DataAdvertencia )" maxlength="@Advertencia.TAM_MAX_DATA_ADVERTENCIA" style="width: 110px; display: inline;" disabled>
+						<input type="hidden"id="input-data-advertencia" name="DataAdvertencia" value="@Shared.fnGetStrData( @advertencia.DataAdvertencia )"/>
+					</div>
+				}
+				<label for="input-data" class="col-md-3 control-label">Limite Confirmação<span class="text-danger">*</span></label>
+				<div class="col-md-2">
+					<div id="dt-confirmacao" class="input-group">
+						<input type="text" class="form-control" id="input-data-limite" name="DataLimiteConfirmacao" placeholder="dd/mm/aaaa" title="dd/mm/aaaa" value="@Shared.fnGetStrData( @advertencia.DataLimiteConfirmacao )" maxlength="@Advertencia.TAM_MAX_DATA_CONFIRMACAO">
+						<span class="input-group-addon">
+							<span class="fa fa-calendar"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<div class="form-group">
+				<label for="input-matricula" class="col-md-3 control-label">Matrícula<span class="text-danger">*</span></label>
+				@if( bInclusao )
+				{
+					<div class="col-md-2">
+						<div class="input-group">
+							<input type="hidden" id="hnd-matricula" name="NrMatricula" />
+							<input type="text" class="form-control" placeholder="Matrícula" id="input-matricula" value="" maxlength="@Advertencia.TAM_MAX_MATRICULA" autofocus="autofocus" style="width: 145px; display: inline; border-bottom-left-radius:4px; border-top-left-radius:4px;">
+							<span class="input-group-btn">
+								<button class="btn btn-default btn-buscar" id="button-buscar" title="Buscar Matrícula"><i class="fa fa-search" aria-hidden="true"></i></button>
+							</span>
+						</div><!-- /input-group -->
+					</div>
+					<div class="col-md-6 div-dados-promotora" style="margin-left: 20px;">
+					</div>
+				}
+				else
+				{
+					<div class="col-md-2">
+						<input type="text" class="form-control" id="input-matricula" name="NrMatricula" value="@advertencia.NrMatricula" maxlength="@Advertencia.TAM_MAX_MATRICULA" style="width: 105px; display: inline" disabled>
+					</div>
+					<div class="col-md-6 div-dados-promotora" style="margin-left: 20px;">
+						@Html.Partial("../Promotora/DadosPromotora", @promotora)
+					</div>
+				}
+			</div>
+			<div class="form-group">
+				<label for="select-setor" class="col-md-3 control-label">Setor<span class="text-danger">*</span></label>
+				@if( bInclusao )
+				{
+					<div class="col-md-2">
+						<input type="hidden" id="hnd-setor" name="Setor" />
+						<select class="form-control dados-advertencia" id="select-setor" style="width:185px;">
+							<option value=@Advertencia.ID_ADVERTENCIA_INVALIDO>Selecione um Setor</option>
+						</select>
+					</div>
+					<div class="col-md-6 div-dados-setor" style="margin-left: 20px;">
+					</div>
+				}
+				else
+				{
+					<div class="col-md-2">
+						<input type="text" class="form-control" id="input-setor" name="Setor" value="@advertencia.Setor" style="width: 105px; display: inline" disabled>
+					</div>
+					<div class="col-md-6 div-dados-setor" style="margin-left: 20px;">
+						@Html.Partial( "../Setor/DadosSetor", @setor )
+					</div>
+				}
+			</div>
+			<div class="form-group">
+				@if( bInclusao )
+				{
+					<label for="input-campanha" class="col-md-3 control-label">Campanha<span class="text-danger">*</span></label>
+					<div class="col-md-3">
+						<div class="col-md-3" style="padding-left: 0px; padding-right: 0px;">
+							<input type="text" class="form-control" id="input-campanha" name="NrCampanha" placeholder="cc" value="" maxlength="@Advertencia.TAM_MAX_CODIGO_CAMPANHA" />
+						</div>
+						<div class="col-md-1" style="padding-top: 5px; padding-left: 10px; padding-right: 15px;">/</div>
+						<div class="col-md-6" style="padding-left: 0px; padding-right: 0px;">
+							<input type="text" class="form-control" id="input-campanha" name="NrAnoCampanha" placeholder="aaaa" value="" maxlength="@Advertencia.TAM_MAX_ANO_CAMPANHA" />
+						</div>
+					</div>
+				}
+				else
+				{
+					<label for="input-campanha" class="col-md-3 control-label">Campanha<span class="text-danger">*</span></label>
+					<div class="col-md-3">
+						<div class="col-md-3" style="padding-left: 0px;">
+							<input type="text" class="form-control dados-advertencia" id="input-campanha" name="NrCampanha" placeholder="cc" value="@advertencia.Campanha.Codigo" maxlength="@Advertencia.TAM_MAX_CODIGO_CAMPANHA" />
+						</div>
+						<div class="col-md-1" style="padding-top: 5px; padding-left: 10px; padding-right: 15px;">/</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control dados-advertencia" id="input-campanha" name="NrAnoCampanha" placeholder="aaaa" value="@advertencia.Campanha.NrAno" maxlength="@Advertencia.TAM_MAX_ANO_CAMPANHA" />
+						</div>
+					</div>
+				}
+			</div>
+			<hr />
+			<div class="form-group">
+				@if ( bInclusao )
+				{
+					<label for="select-tipo-advertencia" class="col-md-3 control-label">Tipo<span class="text-danger">*</span></label>
+					<div class="col-md-2">
+						<select name="IdTipo" id="select-tipo-advertencia" class="form-control dados-advertencia" style="width:185px;">
+							<option value=@Advertencia.ID_ADVERTENCIA_INVALIDO>Selecione um Tipo</option>
+							@foreach (var tipo in tipoAdvertencia.getArrTipoAdvertencia())
+							{
+								<option value="@tipo.Id">@tipo.Nome</option>
+							}
+						</select>
+					</div>
+				}
+				else
+				{
+					<label class="col-md-3 control-label">Tipo<span class="text-danger">*</span></label>
+					<div class="col-md-2">
+						<p class="form-control-static">@advertencia.DescricaoTipo</p>
+						<input type="hidden" id="input-hidden-id-tipo" name="IdTipo" value="@advertencia.IdTipo">
+					</div>
+				}
+				<div class="form-group div-eh-bloqueio" style="display:none;">
+					<div class="checkbox-inline col-md-offset-1">
+						<label for="checkbox-eh-bloqueio" style="font-weight: normal;">
+							<input type="checkbox" id="checkbox-eh-bloqueio" class="dados-advertencia" name="EhBloqueio" value="true" @Shared.getAttrInputChecked( advertencia.EhBloqueio ) />Possui bloqueio
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-motivo" class="col-md-3 control-label">Motivo<span class="text-danger">*</span></label>
+				<div class="col-md-3">
+					<select class="form-control dados-advertencia" id="input-motivo" name="CodigoMotivo">
+						<option value=@Advertencia.ID_ADVERTENCIA_INVALIDO>Selecione um Motivo</option>
+						@foreach ( Motivo umMotivo in advertencia.ArrMotivos )
+						{
+							<option value="@umMotivo.Codigo" @Shared.getHtmltemSelecionado( Html, advertencia.CodigoMotivo, umMotivo.Codigo )> @umMotivo.Descricao </option>
+						}
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-complemento" class="col-md-3 control-label">Complemento</label>
+				<div class="col-md-6">
+					<textarea class="form-control dados-advertencia" style="resize: none;" rows="2" id="textarea-complemento" name="Complemento" placeholder="Complemento">@advertencia.Complemento</textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-observacao" class="col-md-3 control-label">Observação</label>
+				<div class="col-md-6">
+					<textarea class="form-control dados-advertencia" style="resize: none;" rows="3" id="textarea-observacao" name="Observacao" placeholder="Observação">@advertencia.Observacao</textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-3"></div>
+				<div class="col-md-9">
+					<div class="checkbox-inline">
+						<label for="checkbox-st-confirmacao" style="font-weight: normal;">
+							<input type="checkbox" class="dados-advertencia" id="checkbox-st-confirmacao" name="StConfirmacao" value="true" @Shared.getAttrInputChecked( advertencia.StConfirmacao ) />Já confirmado
+						</label>
+					</div>
+				</div>
+			</div>
+			@if ( !bInclusao )
+			{
+				<div class="form-group">
+					<div class="col-md-3"></div>
+					<div class="col-md-9">
+							<p class="form-control-static"><b>Última Alteração em: @Shared.fnGetStrData(@advertencia.DataUltimaAlteracao ) por @advertencia.UsuarioAlteracao</b></p>
+					</div>
+				</div>
+			}
+			<div class="form-group">
+				<div class="col-md-3">
+					<span class="text-danger form-control-static" style="font-size: .8em; text-align: right;">* obrigatório</span>
+				</div>
+			</div>
+			<hr />
+			<div class="form-group">
+				@if (bInclusao || !advertencia.StConfirmacao)
+				{
+					<div class="col-md-9 col-md-offset-3">
+						<button class="btn btn-default" id="button-salvar"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;OK</button>
+						<a href="@Url.Action( "CadastroAdvertencia", "Advertencia" )" class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Cancelar</a>
+					</div>
+				}
+				else
+				{
+					<div class="col-md-9 col-md-offset-3">
+						<a href="@Url.Action( "CadastroAdvertencia", "Advertencia" )" class="btn btn-default"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Voltar</a>
+					</div>
+				}
+			</div>
+		</form>
+	</div>
+</div>
+<div class='modal' tabindex='-1' role='dialog' id='div-modal-imprimir-advertencia' style='display: none;'>
+</div>

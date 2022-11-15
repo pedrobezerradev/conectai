@@ -1,0 +1,103 @@
+﻿@using Conectai.Properties;
+@using Conectai.Models.Data;
+@model IList<Demanda>
+@{
+    ViewBag.Title = Mensagens.STR_MINHAS_DEMANDAS;
+    ViewBag.historico = null;
+
+    const int NUM_COLUNAS = 7;
+
+    int numLinhasExtras = 10;
+
+    if (Model != null)
+    {
+        if (Model.Count < numLinhasExtras)
+        {
+            numLinhasExtras = numLinhasExtras - Model.Count;
+        }
+        else
+        {
+            numLinhasExtras = 0;
+        }
+    }
+}
+@section scripts{
+    <script src="~/Scripts/demanda/index-1.0.js"></script>
+    <script src="~/Scripts/demanda/dlgAvaliarAtendimento-1.0.js"></script>
+}
+@section navegacaoTopo
+{
+    @Html.Partial("../Shared/_BarraNavegacaoTopo")
+}
+<div class="row">
+    <div class="col-md-4 col-md-offset-8" style="text-align: right; padding-bottom: 5px;">
+        <a class="btn btn-default" href="@Url.Action( "Editar", "Demanda" )"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Novo&nbsp;</a>
+    </div>
+</div>
+@if (Model.Count == 0)
+{
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-md-12">
+            <div class="alert alert-warning" role="alert">
+                <p class="text-center"><strong>@Mensagens.STR_NAO_EXISTEM_DEMANDAS_CADASTRADAS</strong></p>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <table id="tabela-demanda" class="table table-responsive table-bordered table-striped table-grid table-hover">
+        <thead>
+            <tr>
+                <th>@Mensagens.STR_NUMERO_DEMANDA</th>
+                <th>@Mensagens.STR_TIPO_SERVICO</th>
+                <th>@Mensagens.STR_STATUS_DEMANDA</th>
+                <th>@Mensagens.STR_DATA_ABERTURA</th>
+                <th>@Mensagens.STR_DATA_ENCERRAMENTO</th>
+                <th>@Mensagens.STR_OBSERVACOES</th>
+                <th title="@Mensagens.STR_ACOES">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var demanda in Model)
+            {
+                <tr class="a-link-consultar">
+                    <td>@demanda.Id</td>
+                    <td>@demanda.TipoServico.Descricao</td>
+                    <td>@demanda.StatusDemanda.Descricao</td>
+                    <td>@demanda.DtAbertura</td>
+                    <td>@demanda.DtEncerramento</td>
+                    <td>@demanda.Observacao</td>
+                    <td style="white-space:nowrap; text-align: right;">
+                        @if (demanda.StatusDemanda.Id != Const.ID_STATUS_DEMANDA_FINALIZADO)
+                        {
+                            <a class="a-link-editar" href="@Url.Action("Editar", "Demanda", new { id = @demanda.Id })" id="@demanda.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;editar</a>
+                            <a class="a-link-excluir" href="@Url.Action("Excluir", "Demanda", new { id = @demanda.Id })" id="@demanda.Id" data-id-demanda="@demanda.Id"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;excluir</a>
+                        }
+                        else
+                        {
+                            if (demanda.NotaAtendimento == null)
+                            {
+                                <a href="@Url.Action("Avaliar", "Demanda", new { id = @demanda.Id })" id="a-avaliar-atendimento" data-id-demanda="@demanda.Id"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;avaliar atendimento</a>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+            @for (int index = 0; index < numLinhasExtras; index++)
+            {
+                <tr>
+                    @for (int cols = 0; cols < NUM_COLUNAS; cols++)
+                    {
+                        <td>&nbsp;</td>
+                    }
+                </tr>
+            }
+        </tbody>
+        @Html.Partial("_CommonPaginacao", NUM_COLUNAS)
+    </table>
+    <form id="form-preencher-lista" action="@Url.Action( "Index", "Demanda" )">
+        <input type="hidden" name="nrPagina" />
+    </form>
+}
+<div class="modal" tabindex="-1" role="dialog" id="div-modal-avaliar-atendimento" data-backdrop="static" data-keyboard="false" style="display: none;"></div>

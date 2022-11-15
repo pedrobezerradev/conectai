@@ -1,0 +1,68 @@
+﻿@{
+	ViewBag.Title = "Status App";
+
+	IList<string> arrNomesArqLog = (IList<string>)ViewBag.arrNomesArqLog;
+	Dictionary<String, HttpSessionStateBase> activeLogins = (Dictionary<String, HttpSessionStateBase>)ViewBag.activeLogins;
+}
+@functions {
+	//-------------------------------------------------------------------------
+	string separarNomeArquivo( String nomeCompleto )
+	{
+		if( String.IsNullOrEmpty( nomeCompleto ) )
+			return ( String.Empty );
+
+		int pos = Math.Max( nomeCompleto.LastIndexOf( '/' ), nomeCompleto.LastIndexOf( '\\' ) );
+
+		if( pos >= 0 )
+			return ( nomeCompleto.Substring( pos + 1 ) );
+		else
+			return ( nomeCompleto );
+	}
+
+	//-------------------------------------------------------------------------
+	string calcularTempoUltimaAtividade( HttpSessionStateBase sessao )
+	{
+		DateTime dtUltimaAtividade = (DateTime)sessao ["dtUltimaAtividade"];
+		TimeSpan ultimaAtividade = DateTime.Now.Subtract( dtUltimaAtividade );
+
+		return ( ultimaAtividade.ToString( "hh\\:mm\\:ss" ) );
+	}
+}
+<div class="container" style="padding-top: 20px;">
+	<div class="panel panel-info">
+		<div class="panel-heading">Arquivos de Log</div>
+		<div class="panel-body">
+			@foreach( var umNomeArq in arrNomesArqLog )
+			{
+				@Html.ActionLink( separarNomeArquivo( umNomeArq ), "Download", "StatusApp", new
+		   {
+			   nomeArq = umNomeArq
+		   }, new
+		   {
+			   target = "_blank"
+		   } )
+				@: &nbsp;&nbsp;
+			}
+		</div>
+	</div>
+	<div class="panel panel-warning">
+		<div class="panel-heading">Total de Sessões Ativas: @string.Format( "{0:00000}", activeLogins.Count )</div>
+		<div class="panel-body">
+			@if( activeLogins.Count > 0 )
+			{
+				int countSessoes = 0;
+				<div class="row">
+					<div class="col-xs-2">IP</div>
+					<div class="col-xs-2">Login</div>
+					<div class="col-xs-1">Inatividade</div>
+				</div>
+				<hr />
+				foreach( var umaSessao in activeLogins.Values )
+				{
+					countSessoes = countSessoes + 1;
+					@Html.Partial( "_StatusItem", @umaSessao, new ViewDataDictionary { { "count", @countSessoes } } )
+				}
+			}
+		</div>
+	</div>
+</div>

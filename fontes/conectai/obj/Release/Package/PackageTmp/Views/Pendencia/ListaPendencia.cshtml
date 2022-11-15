@@ -1,0 +1,184 @@
+﻿@using SistemaDeAdvertencia.Models.Data;
+@model IList<Advertencia>
+@{
+	ViewBag.Title = "Lista de Pendências";
+	ViewBag.historico = null;
+
+	const int NUM_COLUNAS = 8;
+
+	PendenciaFiltroForm filtroPendencia = (PendenciaFiltroForm)ViewBag.form;
+	IList<Advertencia> listaAdvertencias = Model;
+
+	int numLinhasExtras = 10;
+
+	if (Model != null)
+	{
+		if (Model.Count < numLinhasExtras)
+		{
+			numLinhasExtras = numLinhasExtras - Model.Count;
+		}
+		else
+		{
+			numLinhasExtras = 0;
+		}
+	}
+
+	var filtroMatricula = "";
+	if ( filtroPendencia.Matricula != 0 )
+	{
+		filtroMatricula = filtroPendencia.Matricula.ToString();
+	}
+}
+@functions{
+	//----------------------------------------------------------------------
+	private IHtmlString getHtmlFiltro(bool bAtivo)
+	{
+		if (bAtivo)
+			return (Html.Raw("style='color: firebrick'"));
+
+		return (Html.Raw(""));
+	}
+}
+@section scripts{
+	<script src="~/Scripts/pendencia/listaPendencia.js"></script>
+}
+@section navegacaoTopo
+{
+	@Html.Partial( "../Shared/_BarraNavegacaoTopo" )
+}
+<div class="row">
+	<div class="col-md-4 col-md-offset-8" style="text-align: right; padding-bottom: 5px;" id="div-links-pendencia">
+		<a class="a-link-limpar btn btn-default btn-sm" href="#"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Ver Todas&nbsp;</a>
+	</div>
+</div>
+<form class="form-inline" id="form-filtro-pendencia" action="@Url.Action( "ListaPendencia", "Pendencia" )" style="display: none;">	
+	<input type="hidden" name="nrPagina" />
+	<div class="col-md-3">
+		<label>Matrícula:</label>
+		<input type="text" class="form-control" style="width: 100px;" id="input-matricula" name="Matricula" value="@filtroMatricula">
+	</div>
+	<div class="col-md-3">
+		<a class="a-link-aplicar btn btn-default btn-sm" href="#">Aplicar</a>
+	</div>
+</form>
+@if (listaAdvertencias.Count == 0 )
+{
+	<div class="row" style="margin-top: 10px;">
+		<div class="col-md-12">
+			<div class="alert alert-warning" role="alert">
+				<p class="text-center"><strong>Não existem pendências de advertências ou suspensões</strong></p>
+			</div>
+		</div>
+	</div>
+}
+else
+{
+<br />
+<table id="tabela-pendencia" class="table table-responsive table-bordered table-striped table-grid table-hover">
+	<thead>
+		<tr>
+			<th title="Status">&nbsp;</th>
+			<th>Data de Cadastro</th>
+			<th>Setor</th>
+			<th style="white-space: nowrap;">Matrícula&nbsp;
+				<!-- Filtro Matricula -->
+				<div class="btn-group">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-filter" aria-hidden="true" id="img-filtro-matricula" @getHtmlFiltro(filtroPendencia.ehFiltroMatriculaAtivo())></i><span class="caret" @getHtmlFiltro(filtroPendencia.ehFiltroMatriculaAtivo())></span>
+					</a>
+					<div class="dropdown-menu" style="padding: 5px;">
+						<label style="color:black;">Matrícula:</label>
+						<div class="input-group input-group-sm">
+							<input type="text" class="form-control" placeholder="Matrícula" title="Matrícula" style="border-radius: 3px;" maxlength="@Advertencia.TAM_MAX_MATRICULA" id="filtro-matricula" value="@filtroMatricula">
+						</div>
+						<hr />
+						<div class="btn-group btn-group-sm btn-group-justified" role="group" style="margin: 10px 0;">
+							<a class="a-link-aplicar btn btn-default btn-sm" href="#">Aplicar</a>
+						</div>
+					</div>
+				</div>
+				<!-- Fim Filtro Matricula -->
+			</th>
+			<th style="width: 100%;">Nome</th>
+			<th>Tipo</th>
+			<th>Data Prevista Confirmação</th>
+			<th title="Ações">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach ( var advertencia in listaAdvertencias)
+		{
+			<tr class="a-link-consultar">
+				<td style="text-align: center;">
+					@if (advertencia.StatusAdvertencia == Advertencia.ID_STATUS_VENCIDA_NAO_CONFIRMADA)
+					{
+						<i class="fa fa-exclamation-circle text-danger" aria-hidden="true" title="Advertência vencida e não confirmada"></i>
+					}
+					else
+					{
+						<i class="fa fa-minus-circle text-info" aria-hidden="true" title="Advertência não confirmada"></i>
+					}
+				</td>
+				<td>@Shared.fnGetStrData( @advertencia.DataAdvertencia )</td>
+				<td>@advertencia.Setor</td>
+				<td>@advertencia.NrMatricula</td>
+				<td style="white-space: nowrap;">@advertencia.NomeUsuarioMatricula</td>
+				<td>@advertencia.DescricaoTipo</td>
+				<td>@Shared.fnGetStrData( @advertencia.DataLimiteConfirmacao )</td>
+				<td style="white-space:nowrap;">
+					<a class="a-link-confirma-pendencia" href="@Url.Action( "ConfirmarPendencia", "Pendencia", new { id = @advertencia.Id } )" id="@advertencia.Id" data-advertencia="@Shared.fnGetStrData( @advertencia.DataAdvertencia )" nome-promotora="@advertencia.NomeUsuarioMatricula"><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;confirmar</a><br />
+				</td>
+			</tr>
+		}
+		@for (int index = 0; index < numLinhasExtras; index++)
+		{
+			<tr>
+				@for (int cols = 0; cols < NUM_COLUNAS; cols++)
+				{
+					<td>&nbsp;</td>
+				}
+			</tr>
+		}
+	</tbody>
+	<tfoot>
+		<tr>
+			<td id="div-navegacao-paginas" colspan="@NUM_COLUNAS" style="text-align: right; font-weight: bold;">
+				<nav>
+					<ul class="pagination">
+						<li>
+							<span>
+								Ir para a página:
+								<select id="select-navegar-para">
+									@for (int numPag = 1; numPag <= ViewBag.paginacao.UltimaPagina; numPag++)
+									{
+										if (numPag == @ViewBag.paginacao.PaginaAtual)
+										{
+											<option value="@numPag" selected="selected">@numPag</option>
+										}
+										else
+										{
+											<option value="@numPag">@numPag</option>
+										}
+									}
+								</select>
+								<span>de @ViewBag.paginacao.UltimaPagina</span>
+								<input type="hidden" id="input-paginacao-atual" value="@ViewBag.paginacao.PaginaAtual" />
+								<input type="hidden" id="input-ultima-paginacao" value="@ViewBag.paginacao.UltimaPagina" />
+								<input type="hidden" id="input-numitens-atual" value="@ViewBag.paginacao.NumItensPorPag" />
+								<input type="hidden" id="input-numtotal-itens" value="@ViewBag.paginacao.NumTotalItens" />
+							</span>
+						</li>
+						<li><a href="#" class="a-link-navegacao" title="Ir para primeira página" data-ind-pag="@ViewBag.paginacao.PrimeiraPagina"><i class="fa fa-caret-left" aria-hidden="true"></i><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="a-link-navegacao" title="Ir para página anterior" data-ind-pag="@ViewBag.paginacao.PagAnt"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="a-link-navegacao" title="Ir para próxima página" data-ind-pag="@ViewBag.paginacao.ProxPag"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="a-link-navegacao" title="Ir para última página" data-ind-pag="@ViewBag.paginacao.UltimaPagina"><i class="fa fa-caret-right" aria-hidden="true"></i><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+						<li>
+							<span>@ViewBag.paginacao.IndPrimItem-@ViewBag.paginacao.IndUltimoItem de @ViewBag.paginacao.NumTotalItens</span>
+						</li>
+					</ul>
+				</nav>
+			</td>
+		</tr>
+	</tfoot>
+</table>
+}

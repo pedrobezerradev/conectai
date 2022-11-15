@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\pix08\PixWebApps\DeMillus\Advertencia\1.0.8.0</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Code/Shared.cshtml">
+      <publishTime>03/30/2020 11:18:03</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 17:29:20</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>03/08/2017 20:26:22</publishTime>
+    </File>
+    <File Include="bin/Manual/manual_1.0.7.1.pdf">
+      <publishTime>09/26/2019 11:32:44</publishTime>
+    </File>
+    <File Include="bin/Manual/manual_1.0.pdf">
+      <publishTime>12/13/2017 15:42:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>10/04/2013 18:38:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.ProcessingObjectModel.DLL">
+      <publishTime>10/04/2013 18:38:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.DLL">
+      <publishTime>10/04/2013 18:38:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2012 16:23:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/18/2017 14:57:10</publishTime>
+    </File>
+    <File Include="bin/Reports/ImprimirAdvertencia.rdlc">
+      <publishTime>04/06/2020 11:19:14</publishTime>
+    </File>
+    <File Include="bin/SistemaDeAdvertencia.dll">
+      <publishTime>04/13/2020 09:41:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 06:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 06:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 17:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 06:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 06:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 06:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 06:04:30</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 14:57:34</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-datetimepicker.css">
+      <publishTime>01/18/2018 16:15:47</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.css">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.css.map">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.min.css">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap-theme.min.css.map">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css.map">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css.map">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.css">
+      <publishTime>11/07/2017 11:56:42</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.min.css">
+      <publishTime>11/07/2017 11:56:42</publishTime>
+    </File>
+    <File Include="Content/css/Site-1.0.css">
+      <publishTime>01/30/2018 12:10:37</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.eot">
+      <publishTime>11/07/2017 11:56:42</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.svg">
+      <publishTime>11/07/2017 11:56:42</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.ttf">
+      <publishTime>11/07/2017 11:56:42</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff">
+      <publishTime>11/07/2017 11:56:42</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff2">
+      <publishTime>11/07/2017 11:56:42</publishTime>
+    </File>
+    <File Include="Content/fonts/FontAwesome.otf">
+      <publishTime>11/07/2017 11:56:42</publishTime>
+    </File>
+    <File Include="Content/img/logo.png">
+      <publishTime>11/08/2017 13:20:56</publishTime>
+    </File>
+    <File Include="Content/img/LogoCinza.gif">
+      <publishTime>07/23/2015 16:07:10</publishTime>
+    </File>
+    <File Include="Content/img/LogoPrata.gif">
+      <publishTime>12/01/2017 13:30:24</publishTime>
+    </File>
+    <File Include="Content/img/LogoRosa.png">
+      <publishTime>01/26/2017 15:08:56</publishTime>
+    </File>
+    <File Include="DataSets/ImprimirAdvertenciaDataSet.xsc">
+      <publishTime>04/06/2020 11:15:38</publishTime>
+    </File>
+    <File Include="DataSets/ImprimirAdvertenciaDataSet.xss">
+      <publishTime>04/06/2020 11:15:38</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>07/10/2017 17:08:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/07/2017 10:26:02</publishTime>
+    </File>
+    <File Include="log4net.config">
+      <publishTime>10/17/2017 18:15:04</publishTime>
+    </File>
+    <File Include="Manual/manual_1.0.7.1.pdf">
+      <publishTime>09/26/2019 11:32:44</publishTime>
+    </File>
+    <File Include="Manual/manual_1.0.pdf">
+      <publishTime>12/13/2017 15:42:37</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/07/2020 15:11:16</publishTime>
+    </File>
+    <File Include="Reports/ImprimirAdvertencia.rdlc">
+      <publishTime>04/06/2020 11:19:14</publishTime>
+    </File>
+    <File Include="Scripts/advertencia/cadastroAdvertencia-1.0.js">
+      <publishTime>06/26/2019 11:11:02</publishTime>
+    </File>
+    <File Include="Scripts/advertencia/dlgImprimirNovaAdvertencia-1.0.js">
+      <publishTime>03/31/2020 17:33:15</publishTime>
+    </File>
+    <File Include="Scripts/advertencia/dlgJustificarExclusaoAdvertencia.js">
+      <publishTime>06/26/2019 11:34:04</publishTime>
+    </File>
+    <File Include="Scripts/advertencia/editarAdvertencia-1.0.js">
+      <publishTime>04/07/2020 15:04:41</publishTime>
+    </File>
+    <File Include="Scripts/advertencia/editarAdvertencia.js">
+      <publishTime>04/07/2020 15:04:41</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.js">
+      <publishTime>01/18/2018 12:44:36</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.min.js">
+      <publishTime>01/18/2018 12:44:35</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>11/07/2017 11:50:00</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>11/07/2017 11:49:58</publishTime>
+    </File>
+    <File Include="Scripts/global/gCommon.js">
+      <publishTime>02/15/2018 12:30:32</publishTime>
+    </File>
+    <File Include="Scripts/global/gCommonAjax.js">
+      <publishTime>11/21/2017 12:08:02</publishTime>
+    </File>
+    <File Include="Scripts/global/gCommonRodape.js">
+      <publishTime>12/13/2017 16:32:01</publishTime>
+    </File>
+    <File Include="Scripts/global/gCommonSobre.js">
+      <publishTime>12/13/2017 16:35:57</publishTime>
+    </File>
+    <File Include="Scripts/global/gCommonString.js">
+      <publishTime>02/09/2018 17:28:54</publishTime>
+    </File>
+    <File Include="Scripts/home/index.js">
+      <publishTime>12/14/2017 15:47:53</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.2.1.js">
+      <publishTime>11/07/2017 11:53:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.2.1.min.js">
+      <publishTime>11/07/2017 11:53:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.2.1.min.map">
+      <publishTime>11/07/2017 11:53:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.2.1.slim.js">
+      <publishTime>11/07/2017 11:53:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.2.1.slim.min.js">
+      <publishTime>11/07/2017 11:53:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.2.1.slim.min.map">
+      <publishTime>11/07/2017 11:53:58</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.js">
+      <publishTime>01/18/2018 12:44:34</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.min.js">
+      <publishTime>01/18/2018 12:44:34</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>01/18/2018 12:44:34</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>01/18/2018 12:44:33</publishTime>
+    </File>
+    <File Include="Scripts/motivo/cadastroMotivo.js">
+      <publishTime>12/15/2017 11:37:38</publishTime>
+    </File>
+    <File Include="Scripts/motivo/editarMotivo-1.0.js">
+      <publishTime>04/07/2020 15:21:57</publishTime>
+    </File>
+    <File Include="Scripts/pendencia/listaPendencia.js">
+      <publishTime>12/14/2017 15:54:12</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>04/13/2020 09:40:43</publishTime>
+    </File>
+    <File Include="Views/Advertencia/CadastroAdvertencia.cshtml">
+      <publishTime>03/31/2020 16:28:23</publishTime>
+    </File>
+    <File Include="Views/Advertencia/EditarAdvertencia.cshtml">
+      <publishTime>04/13/2020 09:41:18</publishTime>
+    </File>
+    <File Include="Views/Advertencia/ImprimirNovaAdvertencia.cshtml">
+      <publishTime>03/31/2020 17:19:40</publishTime>
+    </File>
+    <File Include="Views/Advertencia/_DlgJustificarExclusaoAdvertencia.cshtml">
+      <publishTime>06/26/2019 11:43:41</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/26/2019 10:21:12</publishTime>
+    </File>
+    <File Include="Views/Motivo/CadastroMotivo.cshtml">
+      <publishTime>02/16/2018 14:29:04</publishTime>
+    </File>
+    <File Include="Views/Motivo/EditarMotivo.cshtml">
+      <publishTime>04/03/2020 15:15:33</publishTime>
+    </File>
+    <File Include="Views/Pendencia/ListaPendencia.cshtml">
+      <publishTime>02/16/2018 14:32:23</publishTime>
+    </File>
+    <File Include="Views/Promotora/DadosPromotora.cshtml">
+      <publishTime>02/08/2018 10:27:52</publishTime>
+    </File>
+    <File Include="Views/Setor/DadosSetor.cshtml">
+      <publishTime>02/08/2018 10:27:33</publishTime>
+    </File>
+    <File Include="Views/Shared/Erro.cshtml">
+      <publishTime>09/26/2019 10:32:25</publishTime>
+    </File>
+    <File Include="Views/Shared/Sobre.cshtml">
+      <publishTime>04/07/2020 15:33:30</publishTime>
+    </File>
+    <File Include="Views/Shared/_BarraNavegacaoTopo.cshtml">
+      <publishTime>02/16/2018 12:46:26</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/16/2018 13:19:44</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutSistema.cshtml">
+      <publishTime>09/26/2019 10:30:20</publishTime>
+    </File>
+    <File Include="Views/Shared/_Rodape.cshtml">
+      <publishTime>02/16/2018 12:22:50</publishTime>
+    </File>
+    <File Include="Views/Sistema/Index.cshtml">
+      <publishTime>02/16/2018 12:50:11</publishTime>
+    </File>
+    <File Include="Views/StatusApp/Index.cshtml">
+      <publishTime>02/16/2018 12:50:28</publishTime>
+    </File>
+    <File Include="Views/StatusApp/StatusApp.cshtml">
+      <publishTime>02/16/2018 12:50:39</publishTime>
+    </File>
+    <File Include="Views/StatusApp/_StatusItem.cshtml">
+      <publishTime>12/14/2017 16:31:52</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/07/2017 10:26:02</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>02/16/2018 12:47:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/13/2020 09:24:51</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
